@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width:100%;
+    background: url('images/index.jpg') no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+h1{
+    margin: 20px;
+}
+.container{
+    width:350px;
+    backdrop-filter:blur(8px);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    color: white;
+    
+}
+.inputbox{
+    width: 100%;
+    border-bottom: 2px solid white;
+    margin: 20px;
+    
+}
+.inputbox input{
+    width:100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    font-size:1em;
+    color:white;
+} 
+
+.forget{
+    margin-bottom: 20px;
+    font-size: .9em;
+    color:white;
+    display:flex;
+    justify-content:center;
+
+}
+.forget a{
+    color:white;
+    text-decoration: none;
+    font-weight:600;
+
+}
+.forget a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 350px;
+    padding: 5px;
+    border-radius: 40px;
+    background: white;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-size:1em;
+    font-weight:600;
+}
+button:hover{
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+.register{
+    font-size:.9em;
+    color:white;
+    text-align:center;
+    margin:25px 0 10px;
+}
+.register p a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+
+}
+.register p a:hover{
+    text-decoration: underline;
+}
