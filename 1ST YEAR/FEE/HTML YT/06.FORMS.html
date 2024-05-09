@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>06.FORMS</title>
+</head>
+<body>
+    <div>
+        <h1>travel form for trip</h1>
+        <form action="form.php">
+            <!-- input elements -->
+            <input type="text" placeholder="enter your name:">
+            <br>
+            <!-- label for checking by clicking on text -->
+            <label for="sectionid">
+                <input type="radio" value="section a" name="section"id=sectionid>Section A
+                </label>
+            <label for="sectionid1">
+                <input type="radio" value="section b" name="section"id=sectionid1>Section B
+            </label>
+            
+            <br>
+            <input type="checkbox" name="canteen" id="foodcanteen" class="red">
+            <label for="foodcanteen">want canteen card</label>
+            <br>
+            <!-- textarea element -->
+            <textarea name="explain" id="explain" cols="30" rows="10"placeholder="why you want to join"></textarea>
+            <br>
+            <!-- select element -->
+            <select name="car" id="car">select your car
+                <option value="omni">omni</option>
+                <option value="desire">desire</option>
+                <option value="traveler">traveler</option>
+            </select>
+        </form>
+    </div>
+</body>
+</html>

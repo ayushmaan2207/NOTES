@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- importing stylsheet from google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <title>07.FONTS_DISPLAY</title>
+    <style>
+        .box1{
+            padding: 10px;
+            display: inline-block; /*width &height has effects */
+            width: 431px;
+            height: 160px;
+            background-color: red;
+            font-size: 20px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+        }
+        .box2{
+            visibility: hidden;/* space is reserved */
+            width: 431px;
+            height: 234px;
+            background-color: green;
+        }
+        .box3{
+            display: inline; /* width & height has no effect since it has a display of inline. */
+            width: 41991px;
+            height: 13524px;
+            background-color: blue;
+            font-family: 'Sigmar', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veritatis quam quas quidem fugiat ipsa perspiciatis perferendis dicta iste tenetur error, distinctio eveniet soluta consequatur assumenda adipisci nam praesentium fuga omnis veniam? Quidem, architecto!
+    </div>
+    <div class="box2">
+        Lorem, ipsum dolor.
+    </div>
+    <div class="box3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus expedita incidunt nobis ad dolores eos quam? Voluptatem, suscipit porro vel quis beatae perferendis veniam!
+    </div>
+</body>
+</html>

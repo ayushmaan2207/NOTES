@@ -1,0 +1,5 @@
+hello : 2
+machine : 1
+learning : 1
+artificial : 1
+intelligence : 1
