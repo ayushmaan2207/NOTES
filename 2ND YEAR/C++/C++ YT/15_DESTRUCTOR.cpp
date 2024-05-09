@@ -1,15 +1,12 @@
 #include<iostream>
 using namespace std;
-int count =0;
 class num{
     public:
     num(){
-        count++;
         cout<< "this is the time when constructor is called for object number"<<endl;
     }
     ~num(){
         cout<< "this is the time when destructor is called for object number"<<endl;
-        count--;
     }
 };
 int main(){
