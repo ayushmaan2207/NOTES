@@ -6,7 +6,7 @@ int main() {
         switch(choice) {
             case 0: break;
             case 1: // Insert
-                if (size >=5) {
+                if (size >=6) {
                     printf("Error: Array size exceeded.\n");
                     break;
                 }

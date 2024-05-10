@@ -14,12 +14,12 @@ int main(){
     m.insert(p);
     // 2
     pair<string,int> pair2("thakur",2);
-    m.insert(p);
+    m.insert(pair2);
     // 3
     m["mera"]=1;
 
     // Search
-    cout<<m["mera"]<<endl;
+    cout<<m["thakur"]<<endl;
     cout<<m.at("ayush")<<endl;
     // cout<<m.at("naam")<<endl; // it will give error
     cout<<m["naam"]<<endl; // it will create new entry and will show zero
