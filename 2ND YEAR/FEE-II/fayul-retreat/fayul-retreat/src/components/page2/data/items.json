@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name" : "Mud Room",
+        "price" : 21238.00
+
+    },
+    {
+        "id": 1,
+        "name" : "Hammock",
+        "price" : 10600.00
+
+    },
+    {
+        "id": 1,
+        "name" : "Hammock",
+        "price" : 15580.00
+
+    }
+]

@@ -148,11 +148,16 @@ int main()
     pq.push(53);
     pq.push(54);
     pq.push(52);
-    cout<<"top ele "<<pq.top()<<endl;
-    pq.pop();
-    cout<<"top ele "<<pq.top()<<endl;
+    // cout<<"top ele "<<pq.top()<<endl;
+    // pq.pop();
+    // cout<<"top ele "<<pq.top()<<endl;
     cout<<"size "<<pq.size()<<endl;
     cout<<"is empty "<<pq.empty()<<endl;
+    while(!pq.empty()){
+        cout<<pq.top()<<" ";
+        pq.pop();
+    }
+    cout<<endl;
 
     // min heap
     priority_queue<int, vector<int>,greater<int>> minheap;
@@ -161,10 +166,14 @@ int main()
     minheap.push(53);
     minheap.push(54);
     minheap.push(52);
-    cout<<"top ele "<<minheap.top()<<endl;
-    minheap.pop();
-    cout<<"top ele "<<minheap.top()<<endl;
+    // cout<<"top ele "<<minheap.top()<<endl;
+    // minheap.pop();
+    // cout<<"top ele "<<minheap.top()<<endl;
     cout<<"size "<<minheap.size()<<endl;
     cout<<"is empty "<<minheap.empty()<<endl;
+    while(!minheap.empty()){
+        cout<<minheap.top()<<" ";
+        minheap.pop();
+    }
     return 0;
 }

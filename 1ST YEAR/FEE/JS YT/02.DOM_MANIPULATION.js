@@ -26,5 +26,5 @@ tn[0].replaceChild(ce2, ce);
 
 // 04. Selecting using Queries
 // sel = document.querySelector('.container');
-// sel = document.querySelectorAll('.container');
-// console.log(sel);
+sel = document.querySelectorAll('.container');
+console.log(sel);
