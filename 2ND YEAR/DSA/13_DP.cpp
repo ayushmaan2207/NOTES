@@ -17,7 +17,7 @@ int main(){
     cin>>n;
 
 // 1. TOP-DOWN APPROACH (Recursion + Memorization)
-    // TC & SC: Both O(n)
+    // TC: O(n) & SC: O(n)+O(n)
     vector<int> mem(n+1,-1);
     cout<<"TOP-DOWN APPROACH: "<<tdFibo(n,mem)<<endl;
 
@@ -34,7 +34,8 @@ int main(){
     }
     cout<<"BOTTOM-UP APPROACH: "<<dp[n]<<endl;
 
-    // 3. SPACE OPTIMISATION
+// 3. SPACE OPTIMISATION
+    // TC: O(n) & SC: O(1)
     int prev1=0;
     int prev2=1;
     if(n<=1){
