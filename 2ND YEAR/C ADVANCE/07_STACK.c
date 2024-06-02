@@ -1,29 +1,18 @@
 // Implement Stack using array in c
-
 // It works on LIFO
 // Last in First Out
 // Means The book which is last entered will be first to be exit
 // ORR.............
-
 // LOFI
-// The book whihc is entered first will be exit last
-
+// The book which is entered first will be exit last
 // -------------------------------------------------------------------------------------
-
 // Operations to be made to Implement Stack ------->
-
 // Only Top most element will be accessed in Stack
-
 // There is a push operation which add elements to array at top position to stack
-
 // There is a pop operation which remove elements from the top poistion of stack
-
 // There is top operation which gives the element present at top most position
-
 // There is a size operation which returns size of Stack
-
 // There is empty operation which tells either stack is empty or not
-
 // ----------------------------------------------------------------------------------------
 
 #include <stdio.h>
@@ -39,12 +28,9 @@ typedef struct Stack{
 
 } Stack;
 
-int * buildStack(int n)
-{
+int * buildStack(int n){
     // Its the basic stack building where the arr is being allocated to memory as we want
-
     // n is the size we entered for Stack
-
     // We had taken the initial size to 1000 but if by any chance our length exceeds max value , we will update max by it
     int max = 1000;
     if (n > max) max = n;
@@ -54,45 +40,38 @@ int * buildStack(int n)
 }
 
 // Push
-void push(Stack* st1, int data)
-{
+void push(Stack* st1, int data){
     // It will first increment our pointer to go to next index where our data will be stored
     st1->arr[++st1->last] = data;
 }
 
 // Pop
-void pop(Stack* st1)
-{
+void pop(Stack* st1){
     // Our last pointer comes backward
     st1->last--;
 }
 
 // Top
-int top(Stack* st1)
-{
+int top(Stack* st1){
     // Return value at last which actully means the top element of stack
     return st1->arr[st1->last];
 }
 
 // Size
-int size(Stack* st1)
-{
+int size(Stack* st1){
     // Size of stack will be equal to last + 1 as last means last index of stack 
     return st1->last +1;
 }
 
 // Empty
-int empty(Stack* st1)
-{
+int empty(Stack* st1){
     // If size is 0 means stack is empty so we return 1 meaning true
     if (size(st1)==0) return 1;
-
     // 0 means false
     return 0;
 }
 
-int main()
-{
+int main(){
     // Last pointer is initialized to -1 where it says that stack is empty 
     // As size if last +1 => 0 
     Stack st1;
