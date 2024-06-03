@@ -13,13 +13,13 @@ void spiral(int arr[4][4]){
             cout<<arr[i][je]<<" ";
         }
         je--;
-        if(is<ie){
+        if(is<=ie){
             for (int i = je; i >= js; i--){
                 cout<<arr[ie][i]<<" ";
             }
             ie--;
         }
-        if(js<je){
+        if(js<=je){
             for (int i = ie; i >= is; i--){
                 cout<<arr[i][js]<<" ";
             }

@@ -121,7 +121,7 @@ int main()
     leaf nodes -> ((n/2)+1) to (n) index
     */
 
-    int arr[6]={-1,51,55,53,52,50};
+    int arr[6]={-1,50,55,53,54,52};
     int n=5;
     for (int i=n/2;i>0;i--){
         heapify(arr,n,i);
