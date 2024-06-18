@@ -1,0 +1,60 @@
+.App{
+  background-color: #000000c6;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.heading{
+  color: #0080ff;
+  font-size: 20px;
+}
+.btns{
+  width: 20vw;
+  gap: 1px;
+  font-size: 30px;
+  display: flex;
+  background-color: #626060;
+  border-radius: 1px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+}
+.btns button{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: none;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  
+}
+.val{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border: none;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  background-color: white;
+}
+
+.reset{
+  background-color: #0080ff;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 1px;
+  padding: 10px 20px;
+}

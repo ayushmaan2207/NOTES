@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Century Gothic";
+  font-style: normal;
+  
+}
+
+.App{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(95.32% 108.18% at 52.95% 100%, #000 0%, #010311 55.68%, #0D0A31 94.2%);
+}
+
+.colr{
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: radial-gradient(146.53% 146.53% at 50% 25.88%, rgba(0, 0, 0, 0.71) 0%, rgba(102, 102, 102, 0.00) 100%);
+}
+
+.cont {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.logo {
+  height: 30vh;
+  width: 30vh;
+  animation: fade-up 0.5s ;
+}
+@keyframes fade-up {
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  max-width: 1014px;
+  text-align: center;
+  animation: fade-up 0.5s ;
+  font-weight: 400;
+}
+.top {
+  color: #fff;
+  font-size: 79px;
+}
+.top span{
+  color: #07D6FF;
+}
+.bottom {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 31px;
+  text-align: left;
+  padding-left: 3%;
+}
+
+.btns{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  animation: fade-up 0.5s ;
+  gap: 10%;
+}
+.btns button {
+  color: #fff;
+  text-align: center;
+  font-size: 31px;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 2px solid #01dbfe;
+  padding: 7px;
+  width: 100%;
+}
+.enc:hover{
+  border: 3px solid #01dbfe;
+  padding: 6px;
+  background-color: #01dcfe0f;
+}
+.dec:hover{
+  border: 3px solid #01dbfe;
+  padding: 6px;
+  background-color: #01dcfe0f;
+}
