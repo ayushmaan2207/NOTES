@@ -1,0 +1,14 @@
+.App{
+    color: #ffffff;
+    background-color: #030014;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+.heading{
+    padding: 50px;
+    font-size: 90px;
+}

@@ -1,0 +1,37 @@
+.box{
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    overflow: auto;
+    flex-direction: columns;
+}
+.card{
+    width: 20%;
+    background-color: #2825258c;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.delete{
+    align-self: center;
+    margin: 10px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    font-size: 17px;
+}
+
+.nothing{
+    color: rgba(255, 255, 255, 0.788);
+    font-size: 17px;
+    margin: 3%;
+    padding: 7px 20px;
+}

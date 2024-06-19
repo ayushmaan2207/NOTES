@@ -1,0 +1,29 @@
+form {
+    width: 50vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.inpt{
+    display: flex;
+    align-content: start;
+    height: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff50;
+    color: #ffffff;
+    font-size: 25px;
+}
+.add{
+    align-self:flex-end;
+    margin-top: 20px;
+    padding: 10px 20px;
+    height: 20%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: green;
+    font-size: 17px;
+}
