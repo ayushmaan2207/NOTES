@@ -1,6 +1,6 @@
 .App{
     color: #ffffff;
-    background-color: #030014;
+    background-color: #373636;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -12,3 +12,4 @@
     padding: 50px;
     font-size: 90px;
 }
+

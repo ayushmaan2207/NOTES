@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: radial-gradient(95.32% 108.18% at 52.95% 100%, #000 0%, #010311 55.68%, #0D0A31 94.2%);
+  background: radial-gradient(92.75% 106.34% at 52.95% 100%, #000 0%, #010311 43.47%, #0D0A31 94.2%);
 }
 
 .colr{
@@ -37,7 +37,7 @@
 .logo {
   height: 30vh;
   width: 30vh;
-  animation: fade-up 0.5s ;
+  animation: fade-up 1s ;
 }
 @keyframes fade-up {
   0%{
@@ -53,7 +53,7 @@
 .container{
   max-width: 1014px;
   text-align: center;
-  animation: fade-up 0.5s ;
+  animation: fade-up 1s ;
   font-weight: 400;
 }
 .top {
@@ -74,7 +74,7 @@
   width: 60%;
   display: flex;
   justify-content: space-between;
-  animation: fade-up 0.5s ;
+  animation: fade-up 1s ;
   gap: 10%;
 }
 .btns button {

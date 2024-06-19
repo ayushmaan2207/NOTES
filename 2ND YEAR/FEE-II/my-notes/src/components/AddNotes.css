@@ -4,7 +4,9 @@ form {
     display: flex;
     flex-direction: column;
 }
-
+.inpt::placeholder{
+    color: #ffffffe1;
+}
 .inpt{
     display: flex;
     align-content: start;
@@ -20,10 +22,9 @@ form {
     align-self:flex-end;
     margin-top: 20px;
     padding: 10px 20px;
-    height: 20%;
     border: none;
     border-radius: 5px;
     color: white;
     background-color: green;
-    font-size: 17px;
+    font-size:20px;
 }
