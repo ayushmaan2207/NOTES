@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import "./AddNotes.css"
-function AddNotes(){
+
+function AddNotes({addn}){
   const [desc,setDesc]= useState("");
 
   function notesHandler(event){
@@ -9,19 +10,13 @@ function AddNotes(){
 
   function submitHandler(event){
     event.preventDefault();
-    const note ={
-      desc:desc,
-    }
-    if(desc.length>0){
-      console.log(note);
-    }
     setDesc('');
   }
 
   return (
     <form onSubmit={submitHandler}>
         <textarea value={desc} onChange={notesHandler} placeholder="Type..." className="inpt" type="text" />
-        <button className="add">Add</button>
+        <button className="add" onClick={() => addn(desc)}>Add</button>
     </form>
   )
 }
