@@ -1,6 +1,7 @@
-import "./App.css";
+// import "./Decrypt.css";
+import React from "react";
 
-function App() {
+const Decrypt = () => {
   return (
     <>
       <div className="App">
@@ -28,6 +29,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
-export default App;
+export default Decrypt;

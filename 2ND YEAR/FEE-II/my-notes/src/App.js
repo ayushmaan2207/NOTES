@@ -13,6 +13,7 @@ function App() {
     if (text.length > 0) {
       // const obj={
       //   desc:text,
+      //   tag: imp,
       // }
       // const newNotes = [...notes, obj];
       // setNotes(newNotes);

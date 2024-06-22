@@ -10,7 +10,7 @@
 .App{
   position: relative;
   height: 100vh;
-  /* width: 100vw; */
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +23,11 @@
   width: 934px;
   height: 965px;
   top: -70vh;
-  left: -5vw;
+  right: -5vw;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, rgba(98, 0, 255, 0.402) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float 4s ease-in-out infinite ;
+  animation: change 1s  ;
+
 }
 .colr2{
   position: absolute;
@@ -36,13 +37,15 @@
   right: -30vw;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, rgba(158, 0, 152, 0.48) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float 4s ease-in-out 4s infinite ;
-
-
 }
-@keyframes float{
-  50%{
-    transform: scale(0.8);
+@keyframes change{
+  0%{
+    top: -70vh;
+    left: -5vw;
+  }
+  100%{
+    top: -70vh;
+    right: -5vw;
   }
 }
 

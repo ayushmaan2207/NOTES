@@ -9,6 +9,7 @@ function AddNotes({addn}){
   }
 
   function submitHandler(event){
+    // to prevent re-render
     event.preventDefault();
     setDesc('');
   }

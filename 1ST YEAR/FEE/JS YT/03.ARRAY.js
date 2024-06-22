@@ -77,3 +77,8 @@
         return 'hello'+ val;
     })
     // console.log(value);
+
+// REDUCING AN ARRAY
+    let a=[1,2,3,4,5,6];
+    let sum= a.reduce((prev,curr)=>prev+curr,0);
+    // console.log(sum);
