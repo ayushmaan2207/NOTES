@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Century Gothic";
+  font-style: normal;
+  overflow: hidden;
+}
+
+.Encrypt {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(
+    92.75% 106.34% at 52.95% 100%,
+    #000 0%,
+    #010311 43.47%,
+    #0d0a31 94.2%
+  );
+}
+
+.clr1 {
+  position: absolute;
+  width: 934px;
+  height: 965px;
+  top: -70vh;
+  right: -5vw;
+  z-index: 0;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(98, 0, 255, 0.402) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  animation: float1 2s;
+}
+@keyframes float1 {
+  0% {
+    transform: translateX(-50vw);
+  }
+}
+.clr2 {
+  position: absolute;
+  width: 1082px;
+  height: 886px;
+  top: 40vh;
+  left: -5vw;
+  z-index: 0;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(158, 0, 152, 0.48) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  animation: float2 2s;
+}
+@keyframes float2 {
+  0% {
+    transform: translateX(50vw);
+  }
+}
+
+.contt {
+  margin: 80px 0 50px;
+  /* background-color: #fff; */
+  z-index: 1;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
+}
+.logoe {
+  height: 20vh;
+  width: 20vh;
+  filter: drop-shadow(0px 0px 3px black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoe img {
+  width: 90%;
+  height: 90%;
+}
+
+.containere {
+  max-width: 1014px;
+  text-align: start;
+  font-weight: 400;
+}
+.tope {
+  padding-left: 20px;
+  color: #fff;
+  font-size: 59px;
+}
+.tope span {
+  color: #07d6ff;
+}
+.bottome {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 21px;
+  text-align: left;
+  padding-left: 3%;
+}
+
+.btnse {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.dece {
+  height: 120px;
+  text-align: start;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 2px solid #01dbfe;
+  padding: 15px;
+  font-size: 30px;
+  resize: none;
+  color: white;
+  z-index: 100;
+}
+.dece::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+textarea:focus {
+  border: 2px solid #68ebff;
+  outline: none;
+}
+
+.ence {
+  color: #fff;
+  text-align: center;
+  font-size: 31px;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: rgba(7, 214, 255, 0.5);
+  border: none;
+  margin: 20px 0;
+  width: min-content;
+  padding: 7px 30px;
+  align-self: end;
+  z-index: 100;
+}
+.ence:hover {
+  background-color: rgba(7, 214, 255, 0.721);
+}
+
+.created {
+  width: fit-content;
+  height: fit-content;
+  word-wrap: break-word; /* Ensure long words break correctly */
+  word-break: break-all;
+  text-align: start;
+  background-color: #01dcfe26;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 30px;
+  color: white;
+  z-index: 100;
+}
