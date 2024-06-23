@@ -48,7 +48,7 @@ const Encrypt = () => {
           </div>
         </div>
         <form onSubmit={submitHandler} className="btnse">
-          <textarea value={encrpt} onChange={changeHandler} className="dece" placeholder="Write the text you want to Decrypt."></textarea>
+          <textarea value={encrpt} onChange={changeHandler} className="dece" placeholder="Write the text you want to Encrypt."></textarea>
           <button onClick={clickHandler} className="ence">Encrypt</button>
           <div className="created"></div>
         </form>

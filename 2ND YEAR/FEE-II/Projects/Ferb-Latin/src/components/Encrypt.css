@@ -149,6 +149,7 @@ textarea:focus {
 
 .created {
   width: fit-content;
+  max-height: 100px;
   height: fit-content;
   word-wrap: break-word; /* Ensure long words break correctly */
   word-break: break-all;

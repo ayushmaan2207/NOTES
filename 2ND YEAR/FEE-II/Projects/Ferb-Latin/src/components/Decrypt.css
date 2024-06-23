@@ -118,7 +118,8 @@
   color: rgba(255, 255, 255, 0.65);  
 }
 textarea:focus {
-  border: 2px solid #68ebff;
+  border: 3px solid #68ebff;
+  padding:  14px;
   outline: none;
 }
 
@@ -143,6 +144,7 @@ textarea:focus {
 
 .created{
   width: fit-content;
+  max-height: 100px;
   height: fit-content;
   word-wrap: break-word; /* Ensure long words break correctly */
   word-break: break-all;
