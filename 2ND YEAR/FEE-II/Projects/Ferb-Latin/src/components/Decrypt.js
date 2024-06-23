@@ -20,7 +20,8 @@ const Decrypt = () => {
     }
     arr=arr.join(" ");
     console.log(arr);
-    let ele= document.querySelector('.created')
+    let ele= document.querySelector('.cr');
+    ele.classList.add("created");
     ele.textContent=`${arr}`;
 
 
@@ -34,7 +35,7 @@ const Decrypt = () => {
       <div className="Decrypt">
         <div className="clr1"></div>
         <div className="clr2"></div>
-        <div className="contt">
+        <div className="contd">
           <div className="logod">
             <img src="logo.png" alt="logo" />
           </div>
@@ -51,7 +52,7 @@ const Decrypt = () => {
         <form onSubmit={submitHandler} className="btnsd">
           <textarea value={decrpt} onChange={changeHandler} className="encd" placeholder="Write the text you want to Decrypt."></textarea>
           <button onClick={clickHandler} className="decd">Decrypt</button>
-          <div className="created"></div>
+          <div className="cr"></div>
         </form>
       </div>
     </>

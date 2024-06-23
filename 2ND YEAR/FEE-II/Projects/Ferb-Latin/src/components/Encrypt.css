@@ -61,7 +61,7 @@
   }
 }
 
-.contt {
+.conte {
   margin: 80px 0 50px;
   /* background-color: #fff; */
   z-index: 1;
@@ -69,7 +69,20 @@
   justify-content: start;
   align-items: start;
   flex-direction: row;
+  animation: conta 1.5s;
 }
+@keyframes conta {
+  0% {
+    filter: blur(2px);
+    margin-bottom: 0px;
+    height: 130vh;
+  }
+  100% {
+    height: 145px;
+    margin-bottom: 55px;
+  }
+}
+
 .logoe {
   height: 20vh;
   width: 20vh;
@@ -77,6 +90,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: logoa 2s;
+}
+@keyframes logoa {
+  0% {
+    transform: translate(34vw, 20px);
+    height: 30vh;
+    width: 30vh;
+  }
 }
 .logoe img {
   width: 90%;
@@ -87,11 +108,23 @@
   max-width: 1014px;
   text-align: start;
   font-weight: 400;
+  animation: containera 2s;
+}
+@keyframes containera {
+  0% {
+    transform: translate(-7.5vw,38vh);
+  }
 }
 .tope {
   padding-left: 20px;
   color: #fff;
   font-size: 59px;
+  animation: topa 2s;
+}
+@keyframes topa {
+  0% {
+    font-size: 79px;
+  }
 }
 .tope span {
   color: #07d6ff;
@@ -101,9 +134,16 @@
   font-size: 21px;
   text-align: left;
   padding-left: 3%;
+  animation: bottoma 2s;
+}
+@keyframes bottoma {
+  0% {
+    font-size: 31px;
+  }
 }
 
 .btnse {
+  margin-top: 20px;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -112,20 +152,33 @@
 .dece {
   height: 120px;
   text-align: start;
-  background-color: transparent;
   border-radius: 15px;
+  background-color: transparent;
   border: 2px solid #01dbfe;
   padding: 15px;
   font-size: 30px;
   resize: none;
   color: white;
   z-index: 100;
+  animation: encda 2s;
+}
+@keyframes encda {
+  0% {
+    transform: translate(10.5vw,0.9vh);
+    width: 230px;
+    filter: blur(2px);
+    height: 12vh;
+  }
+  100%{
+    width: 888px;
+  }
 }
 .dece::placeholder {
   color: rgba(255, 255, 255, 0.65);
 }
 textarea:focus {
-  border: 2px solid #68ebff;
+  border: 3px solid #68ebff;
+  padding: 14px;
   outline: none;
 }
 
@@ -142,6 +195,21 @@ textarea:focus {
   padding: 7px 30px;
   align-self: end;
   z-index: 100;
+  animation: decda 1s;
+}
+@keyframes decda {
+  0% {
+    filter: blur(2px);
+    transform: translate(-10.5vw,-11vh);
+    width: 273px;
+    height: 21vh;
+    background-color: transparent;
+    border: 2px solid #01dbfe;
+  }
+  100%{
+    width: 179px;
+    height: 53px;
+  }
 }
 .ence:hover {
   background-color: rgba(7, 214, 255, 0.721);

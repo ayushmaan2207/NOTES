@@ -1,4 +1,7 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Encrypt from "./components/Encrypt";
+import Decrypt from "./components/Decrypt";
 
 function App() {
   return (
@@ -21,8 +24,12 @@ function App() {
             </div>
           </div>
           <div className="btns">
-            <button className="enc">Encrypt</button>
-            <button className="dec">Decrypt</button>
+            <Link to="/encrypt">
+              <button className="enc">Encrypt</button>
+            </Link>
+            <Link to="/decrypt">
+              <button className="dec">Decrypt</button>
+            </Link>
           </div>
         </div>
       </div>

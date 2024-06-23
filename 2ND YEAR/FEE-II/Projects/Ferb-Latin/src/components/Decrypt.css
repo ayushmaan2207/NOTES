@@ -4,10 +4,9 @@
   font-family: "Century Gothic";
   font-style: normal;
   overflow: hidden;
-  
 }
 
-.Decrypt{
+.Decrypt {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -15,44 +14,54 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  background: radial-gradient(92.75% 106.34% at 52.95% 100%, #000 0%, #010311 43.47%, #0D0A31 94.2%);
+  background: radial-gradient(
+    92.75% 106.34% at 52.95% 100%,
+    #000 0%,
+    #010311 43.47%,
+    #0d0a31 94.2%
+  );
 }
 
-.clr1{
+.clr1 {
   position: absolute;
   width: 934px;
   height: 965px;
   top: -70vh;
   right: -5vw;
   z-index: 0;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(98, 0, 255, 0.402) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float1 2s   ;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(98, 0, 255, 0.402) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  animation: float1 2s;
 }
-@keyframes float1{
-  0%{
+@keyframes float1 {
+  0% {
     transform: translateX(-50vw);
   }
- 
 }
-.clr2{
+.clr2 {
   position: absolute;
   width: 1082px;
   height: 886px;
   top: 40vh;
   left: -5vw;
   z-index: 0;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(158, 0, 152, 0.48) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float2 2s  ;
-
-
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(158, 0, 152, 0.48) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  animation: float2 2s;
 }
-@keyframes float2{
-  0%{
+@keyframes float2 {
+  0% {
     transform: translateX(50vw);
   }
 }
 
-.contt {
+.contd {
   margin: 80px 0 50px;
   /* background-color: #fff; */
   z-index: 1;
@@ -60,42 +69,81 @@
   justify-content: start;
   align-items: start;
   flex-direction: row;
+  animation: conta 1.5s;
 }
-.logod{
+@keyframes conta {
+  0% {
+    filter: blur(2px);
+    margin-bottom: 0px;
+    height: 130vh;
+  }
+  100% {
+    height: 145px;
+    margin-bottom: 55px;
+  }
+}
+
+.logod {
   height: 20vh;
   width: 20vh;
   filter: drop-shadow(0px 0px 3px black);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  animation: logoa 2s;
+}
+@keyframes logoa {
+  0% {
+    transform: translate(34vw, 20px);
+    height: 30vh;
+    width: 30vh;
+  }
 }
 .logod img {
   width: 90%;
   height: 90%;
 }
 
-.containerd{
+.containerd {
   max-width: 1014px;
   text-align: start;
   font-weight: 400;
+  animation: containera 2s;
+}
+@keyframes containera {
+  0% {
+    transform: translate(-7.5vw,38vh);
+  }
 }
 .topd {
   padding-left: 20px;
   color: #fff;
   font-size: 59px;
+  animation: topa 2s;
 }
-.topd span{
-  color: #07D6FF;
+@keyframes topa {
+  0% {
+    font-size: 79px;
+  }
+}
+.topd span {
+  color: #07d6ff;
 }
 .bottomd {
   color: rgba(255, 255, 255, 0.7);
   font-size: 21px;
   text-align: left;
   padding-left: 3%;
+  animation: bottoma 2s;
+}
+@keyframes bottoma {
+  0% {
+    font-size: 31px;
+  }
 }
 
-.btnsd{
+.btnsd {
+  margin-top: 20px;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -104,25 +152,35 @@
 .encd {
   height: 120px;
   text-align: start;
-  background-color: transparent;
   border-radius: 15px;
+  background-color: transparent;
   border: 2px solid #01dbfe;
   padding: 15px;
   font-size: 30px;
   resize: none;
   color: white;
   z-index: 100;
-
+  animation: encda 2s;
 }
-.encd::placeholder{
-  color: rgba(255, 255, 255, 0.65);  
+@keyframes encda {
+  0% {
+    transform: translate(10.5vw,0.9vh);
+    width: 230px;
+    filter: blur(2px);
+    height: 12vh;
+  }
+  100%{
+    width: 888px;
+  }
+}
+.encd::placeholder {
+  color: rgba(255, 255, 255, 0.65);
 }
 textarea:focus {
   border: 3px solid #68ebff;
-  padding:  14px;
+  padding: 14px;
   outline: none;
 }
-
 
 .decd {
   color: #fff;
@@ -130,19 +188,34 @@ textarea:focus {
   font-size: 31px;
   font-weight: 600;
   border-radius: 15px;
-  background-color: rgba(7, 214, 255, 0.50);
+  background-color: rgba(7, 214, 255, 0.5);
   border: none;
   margin: 20px 0;
   width: min-content;
   padding: 7px 30px;
   align-self: end;
   z-index: 100;
+  animation: decda 1s;
 }
-.decd:hover{
-  background-color:  rgba(7, 214, 255, 0.721);
+@keyframes decda {
+  0% {
+    filter: blur(2px);
+    transform: translate(-10.5vw,-11vh);
+    width: 273px;
+    height: 21vh;
+    background-color: transparent;
+    border: 2px solid #01dbfe;
+  }
+  100%{
+    width: 179px;
+    height: 53px;
+  }
+}
+.decd:hover {
+  background-color: rgba(7, 214, 255, 0.721);
 }
 
-.created{
+.created {
   width: fit-content;
   max-height: 100px;
   height: fit-content;

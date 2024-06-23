@@ -13,13 +13,14 @@ const Encrypt = () => {
       if(arr[i].length>1){
         arr[i]=arr[i].slice(1,)+arr[i][0]+'erb';
       }
-      else{
+      else if(arr[i].length==1){
         arr[i]+='ja';
       }
     }
     arr=arr.join(" ");
     console.log(arr);
-    let ele= document.querySelector('.created')
+    let ele= document.querySelector('.cr');
+    ele.classList.add("created");
     ele.textContent=`${arr}`;
 
 
@@ -33,7 +34,7 @@ const Encrypt = () => {
       <div className="Encrypt">
         <div className="clr1"></div>
         <div className="clr2"></div>
-        <div className="contt">
+        <div className="conte">
           <div className="logoe">
             <img src="logo.png" alt="logo" />
           </div>
@@ -50,7 +51,7 @@ const Encrypt = () => {
         <form onSubmit={submitHandler} className="btnse">
           <textarea value={encrpt} onChange={changeHandler} className="dece" placeholder="Write the text you want to Encrypt."></textarea>
           <button onClick={clickHandler} className="ence">Encrypt</button>
-          <div className="created"></div>
+          <div className="cr"></div>
         </form>
       </div>
     </>

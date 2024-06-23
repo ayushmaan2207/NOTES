@@ -26,7 +26,12 @@
   left: -5vw;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, rgba(98, 0, 255, 0.402) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float 4s ease-in-out infinite ;
+  animation: float 4s ease-in-out infinite ,floatg 2s;
+}
+@keyframes floatg {
+  0% {
+    transform: translateX(50vw);
+  }
 }
 .colr2{
   position: absolute;
@@ -36,12 +41,16 @@
   right: -30vw;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, rgba(158, 0, 152, 0.48) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float 4s ease-in-out 4s infinite ;
-
-
+  animation: float 4s ease-in-out 4s infinite , floatg2 2s;
+}
+@keyframes floatg2 {
+  0% {
+    transform: translateX(-70vw);
+  }
 }
 @keyframes float{
   50%{
+    filter: opacity(80%);
     transform: scale(0.8);
   }
 }
@@ -140,7 +149,10 @@
   background-color: transparent;
   border-radius: 15px;
   border: 2px solid #01dbfe;
+  width: 100%;
   padding: 7px;
+}
+.btns a{
   width: 100%;
 }
 .enc:hover{

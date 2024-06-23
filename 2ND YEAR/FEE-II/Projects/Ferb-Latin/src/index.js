@@ -1,24 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import App from './App';
-import Encrypt from './components/Encrypt';
-import Decrypt from './components/Decrypt';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Encrypt from "./components/Encrypt";
+import Decrypt from "./components/Decrypt";
 
-// function Logo() {
-//   return(
-//   <img src="logo.png" alt="logo"/>
-//   );
-// }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <>
-        {/* <Encrypt/> */}
-        <Decrypt/>
-        {/* <App /> */}
-    </>
+    <Router>
+    <div>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/Encrypt" element={<Encrypt />} />
+        <Route path="/Decrypt" element={<Decrypt />} />
+      </Routes>
+    </div>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
