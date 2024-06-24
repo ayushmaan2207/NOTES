@@ -46,11 +46,10 @@ const Decrypt = () => {
           </div>
           <div className="containerd">
             <div className="topd">
-              Welcome to <span>SecureCrypt</span>,
+              Welcome to <span>DeCrypt</span>,
             </div>
             <div className="bottomd">
-              Protect your text messages with our advanced encryption and
-              decryption solutions.
+              Restore your data's readability efficiently with our advanced decryption solutions.
             </div>
           </div>
         </div>
