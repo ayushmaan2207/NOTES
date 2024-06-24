@@ -127,7 +127,7 @@
   width: 60%;
   display: flex;
   justify-content: space-between;
-  animation: fade-up2 3s ;
+  animation: fade-up2 2.5s ;
   gap: 10%;
 }
 @keyframes fade-up2 {
@@ -138,6 +138,7 @@
   }
   50%{
     opacity: 0;
+    filter: blur(5px);
     transform: translateY(5px) scale(0.9);
   }
 }

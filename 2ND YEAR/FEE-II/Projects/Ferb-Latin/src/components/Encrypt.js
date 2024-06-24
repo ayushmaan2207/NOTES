@@ -1,42 +1,41 @@
 import "./Encrypt.css";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { TiArrowBackOutline } from "react-icons/ti";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const Encrypt = () => {
-  const[encrpt,setEnncrpt]= useState('');
+  const [encrpt, setEnncrpt] = useState("");
 
-  function changeHandler(event){
-      setEnncrpt(event.target.value);
+  function changeHandler(event) {
+    setEnncrpt(event.target.value);
   }
-  function clickHandler(){
-    let arr= encrpt.split(" ");
-    for(let i=0;i<arr.length;i++){
-      if(arr[i].length>1){
-        arr[i]=arr[i].slice(1,)+arr[i][0]+'erb';
+  function clickHandler() {
+    if (encrpt.length > 0) {
+      let arr = encrpt.split(" ");
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > 1) {
+          arr[i] = arr[i].slice(1) + arr[i][0] + "erb";
+        } else if (arr[i].length === 1) {
+          arr[i] += "ja";
+        }
       }
-      else if(arr[i].length==1){
-        arr[i]+='ja';
-      }
+      arr = arr.join(" ");
+      console.log(arr);
+      let ele = document.querySelector(".cr");
+      ele.classList.add("created");
+      ele.textContent = `${arr}`;
     }
-    arr=arr.join(" ");
-    console.log(arr);
-    let ele= document.querySelector('.cr');
-    ele.classList.add("created");
-    ele.textContent=`${arr}`;
-
-
   }
-  function submitHandler(event){
+  function submitHandler(event) {
     event.preventDefault();
-    setEnncrpt('');
+    setEnncrpt("");
   }
   return (
     <>
       <div className="Encrypt">
-      <Link to="/">
+        <Link to="/">
           <button className="bkbtn">
-            < TiArrowBackOutline />
+            <TiArrowBackOutline />
           </button>
         </Link>
         <div className="clr1"></div>
@@ -56,8 +55,15 @@ const Encrypt = () => {
           </div>
         </div>
         <form onSubmit={submitHandler} className="btnse">
-          <textarea value={encrpt} onChange={changeHandler} className="dece" placeholder="Write the text you want to Encrypt."></textarea>
-          <button onClick={clickHandler} className="ence">Encrypt</button>
+          <textarea
+            value={encrpt}
+            onChange={changeHandler}
+            className="dece"
+            placeholder="Write the text you want to Encrypt."
+          ></textarea>
+          <button onClick={clickHandler} className="ence">
+            Encrypt
+          </button>
           <div className="cr"></div>
         </form>
       </div>

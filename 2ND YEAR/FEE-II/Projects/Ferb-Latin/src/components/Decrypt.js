@@ -10,19 +10,21 @@ const Decrypt = () => {
     setDecrpt(event.target.value);
   }
   function clickHandler() {
-    let arr = decrpt.split(" ");
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].length > 3) {
-        arr[i] = arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
-      } else {
-        arr[i] = arr[i][0];
+    if (decrpt.length > 0) {
+      let arr = decrpt.split(" ");
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > 3) {
+          arr[i] = arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
+        } else {
+          arr[i] = arr[i][0];
+        }
       }
+      arr = arr.join(" ");
+      console.log(arr);
+      let ele = document.querySelector(".cr");
+      ele.classList.add("created");
+      ele.textContent = `${arr}`;
     }
-    arr = arr.join(" ");
-    console.log(arr);
-    let ele = document.querySelector(".cr");
-    ele.classList.add("created");
-    ele.textContent = `${arr}`;
   }
   function submitHandler(event) {
     event.preventDefault();
@@ -33,7 +35,7 @@ const Decrypt = () => {
       <div className="Decrypt">
         <Link to="/">
           <button className="bkbtn">
-            < TiArrowBackOutline value={{ className: "icons" }}/>
+            <TiArrowBackOutline value={{ className: "icons" }} />
           </button>
         </Link>
         <div className="clr1"></div>
