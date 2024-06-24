@@ -51,7 +51,6 @@
         },
         set fullName(value){
             if((typeof value )!== "string"){
-                // console.log(typeof value);
                 throw new Error ("you have not sent a string")
             };
             let parts= value.split(" ");

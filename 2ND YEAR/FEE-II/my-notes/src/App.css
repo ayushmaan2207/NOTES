@@ -1,15 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 .App{
-    color: #ffffff;
-    background-color: #373636;
-    height: 100vh;
+    padding:7vh 0;
+    height: 86vh;
     width: 100vw;
+    display: flex;
+    background-color: #FAF9F6;
+}
+.line{
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.452);
+    height: 100%;
+}
+.left{
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items:center;
+    margin-top: 15vh;
+    cursor: pointer;
+}
+.tcont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+#Normal{
+    background-color: #94D016;
+}
+#Important{
+    background-color: #FFAD4D;
+}
+#Urgent{
+    background-color: #9575D9;
+}
+.one{
+    display: flex;
+    align-items: center;
+}
+.circle{
+    background-color: #858585;
+    width: 10px;
+    height: 10px;
+    margin:0 10px 0 20px;
+    border-radius: 50%;
+}
+.tcount{
+    margin-right: 20px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    border: none;
+}
+.right{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
 }
-.heading{
-    padding: 50px;
-    font-size: 90px;
+.top{
+    width: -webkit-fill-available;;
+    display: flex;
+    font-size: 58px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
 }
-

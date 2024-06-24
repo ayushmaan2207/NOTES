@@ -11,14 +11,14 @@ function App() {
 
   function addnote(text) {
     if (text.length > 0) {
-      const obj={
-          id:1,
-          tag: "Urgent",
-          desc: text,
-      }
-      let adno=[...notes, obj];
-      for(let i=0;i<adno.length;i++){
-        adno[i].id= i;
+      const obj = {
+        id: 1,
+        tag: "Urgent",
+        desc: text,
+      };
+      let adno = [...notes, obj];
+      for (let i = 0; i < adno.length; i++) {
+        adno[i].id = i;
       }
       toast.success("Note Added");
       setNotes(adno);
@@ -27,8 +27,8 @@ function App() {
 
   function remove(id) {
     const newnotes = notes.filter((notes) => notes.id !== id);
-    for(let i=0;i<newnotes.length;i++){
-      newnotes[i].id= i;
+    for (let i = 0; i < newnotes.length; i++) {
+      newnotes[i].id = i;
     }
     toast.error("Note Deleted");
     setNotes(newnotes);
@@ -36,9 +36,40 @@ function App() {
 
   return (
     <div className="App">
-      <div className="heading">MY-NOTES</div>
-      <AddNotes addn={addnote}></AddNotes>
-      <Notes notes={notes} del={remove} />
+      <div className="left">
+        <div className="tcont Normal">
+          <div className="one">
+            <div id="Normal" className="circle"></div>
+            <div className="tag">Normal</div>
+          </div>
+          <button id="Normal" className="tcount">00</button>
+        </div>
+        <div className="tcont Important">
+          <div className="one">
+            <div id="Important" className="circle"></div>
+            <div className="tag">Important</div>
+          </div>
+          <button id="Important" className="tcount">00</button>
+        </div>
+        <div className="tcont Urgent">
+          <div className="one">
+            <div id="Urgent" className="circle"></div>
+            <div className="tag">Urgent</div>
+          </div>
+          <button id="Urgent" className="tcount">00</button>
+        </div>
+      </div>
+      
+      <div className="line"></div>
+
+      <div className="right">
+        <div className="top">
+          <div className="heading">MY-NOTES</div>
+          <button className="dark">0</button>
+        </div>
+        <AddNotes addn={addnote}></AddNotes>
+        <Notes notes={notes} del={remove} />
+      </div>
     </div>
   );
 }
