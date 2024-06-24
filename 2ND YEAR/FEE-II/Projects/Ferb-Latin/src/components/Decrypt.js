@@ -33,7 +33,7 @@ const Decrypt = () => {
       <div className="Decrypt">
         <Link to="/">
           <button className="bkbtn">
-            < TiArrowBackOutline />
+            < TiArrowBackOutline value={{ className: "icons" }}/>
           </button>
         </Link>
         <div className="clr1"></div>

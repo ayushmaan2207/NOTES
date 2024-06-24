@@ -29,7 +29,6 @@
   background-color: transparent;
   border: none;
   transform: translate(14vw,64.3vh);
-  padding-top: 5px;
   font-size: 31px;
   justify-content: center;
   color: white;
@@ -46,10 +45,15 @@
     filter: opacity(100%);
   }
 }
-.bkbtn:hover{
-  background-color: rgba(7, 214, 255, 0.5);
-  color: black;
+.bkbtn svg{
+  color: white;
+  padding: 8px;
+
 }
+.bkbtn svg:hover{
+  color: #00b0cb;
+}
+
 .clr1 {
   position: absolute;
   width: 934px;

@@ -12,9 +12,9 @@ function Notes({ notes, del }) {
         // jab bhi map use kro to ek key bhejo
         notes.map((notes,index) => {
           return (
-            <div key={index} className="card">
+            <div key={notes.id} className="card">
               {notes.desc}
-              <button onClick={() => del(notes.desc)} className="delete">
+              <button onClick={() => del(notes.id)} className="delete">
                 Delete
               </button>
             </div>

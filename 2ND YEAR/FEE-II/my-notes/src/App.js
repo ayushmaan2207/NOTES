@@ -11,19 +11,25 @@ function App() {
 
   function addnote(text) {
     if (text.length > 0) {
-      // const obj={
-      //   desc:text,
-      //   tag: imp,
-      // }
-      // const newNotes = [...notes, obj];
-      // setNotes(newNotes);
+      const obj={
+          id:1,
+          tag: "Urgent",
+          desc: text,
+      }
+      let adno=[...notes, obj];
+      for(let i=0;i<adno.length;i++){
+        adno[i].id= i;
+      }
       toast.success("Note Added");
-      setNotes((prevNotes) => [...prevNotes, { desc: text }]);
+      setNotes(adno);
     }
   }
 
-  function remove(desc) {
-    const newnotes = notes.filter((notes) => notes.desc !== desc);
+  function remove(id) {
+    const newnotes = notes.filter((notes) => notes.id !== id);
+    for(let i=0;i<newnotes.length;i++){
+      newnotes[i].id= i;
+    }
     toast.error("Note Deleted");
     setNotes(newnotes);
   }

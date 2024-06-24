@@ -46,9 +46,13 @@
     filter: opacity(100%);
   }
 }
-.bkbtn:hover{
-  background-color: rgba(7, 214, 255, 0.5);
-  color: black;
+.bkbtn svg{
+  color: white;
+  padding: 8px;
+
+}
+.bkbtn svg:hover{
+  color: #00b0cb;
 }
 
 .clr1 {
@@ -92,7 +96,6 @@
 
 .contd {
   margin: 80px 0 50px;
-  /* background-color: #fff; */
   z-index: 1;
   display: flex;
   justify-content: start;
@@ -137,12 +140,13 @@
   max-width: 1014px;
   text-align: start;
   font-weight: 400;
-  animation: containera 2s;
+  animation: containera 2s ;
 }
 @keyframes containera {
   0% {
     transform: translate(-7.5vw,38vh);
   }
+ 
 }
 .topd {
   padding-left: 20px;
