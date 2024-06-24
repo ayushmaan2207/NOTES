@@ -41,7 +41,7 @@
   right: -30vw;
   z-index: 0;
   background: radial-gradient(50% 50% at 50% 50%, rgba(158, 0, 152, 0.48) 0%, rgba(115, 115, 115, 0.00) 100%);
-  animation: float 4s ease-in-out 4s infinite , floatg2 2s;
+  animation: float 4s ease-in-out 2s infinite , floatg2 2s;
 }
 @keyframes floatg2 {
   0% {

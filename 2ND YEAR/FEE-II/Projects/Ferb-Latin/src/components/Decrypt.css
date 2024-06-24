@@ -21,6 +21,35 @@
     #0d0a31 94.2%
   );
 }
+.bkbtn{
+  position: absolute;
+  height: 53px;
+  width: 53px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: none;
+  transform: translate(14vw,64.3vh);
+  padding-top: 5px;
+  font-size: 31px;
+  justify-content: center;
+  color: white;
+  animation: appear 4s;
+}
+@keyframes appear {
+  0%{
+    filter: opacity(0%);
+  }
+  50%{
+    filter: opacity(0%);
+  }
+  100%{
+    filter: opacity(100%);
+  }
+}
+.bkbtn:hover{
+  background-color: rgba(7, 214, 255, 0.5);
+  color: black;
+}
 
 .clr1 {
   position: absolute;

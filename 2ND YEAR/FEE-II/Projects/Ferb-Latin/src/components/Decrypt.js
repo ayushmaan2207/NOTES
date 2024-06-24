@@ -1,38 +1,41 @@
 import "./Decrypt.css";
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { TiArrowBackOutline } from "react-icons/ti";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const Decrypt = () => {
-  const[decrpt,setDecrpt]= useState('');
+  const [decrpt, setDecrpt] = useState("");
 
-  function changeHandler(event){
-      setDecrpt(event.target.value);
+  function changeHandler(event) {
+    setDecrpt(event.target.value);
   }
-  function clickHandler(){
-
-    let arr= decrpt.split(" ");
-    for(let i=0;i<arr.length;i++){
-      if(arr[i].length>3){
-        arr[i]=arr[i][arr[i].length-4]+arr[i].slice(0,arr[i].length-4);
-      }
-      else{
-        arr[i]=arr[i][0];
+  function clickHandler() {
+    let arr = decrpt.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].length > 3) {
+        arr[i] = arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
+      } else {
+        arr[i] = arr[i][0];
       }
     }
-    arr=arr.join(" ");
+    arr = arr.join(" ");
     console.log(arr);
-    let ele= document.querySelector('.cr');
+    let ele = document.querySelector(".cr");
     ele.classList.add("created");
-    ele.textContent=`${arr}`;
-
-
+    ele.textContent = `${arr}`;
   }
-  function submitHandler(event){
+  function submitHandler(event) {
     event.preventDefault();
-    setDecrpt('');
+    setDecrpt("");
   }
   return (
     <>
       <div className="Decrypt">
+        <Link to="/">
+          <button className="bkbtn">
+            < TiArrowBackOutline />
+          </button>
+        </Link>
         <div className="clr1"></div>
         <div className="clr2"></div>
         <div className="contd">
@@ -50,8 +53,15 @@ const Decrypt = () => {
           </div>
         </div>
         <form onSubmit={submitHandler} className="btnsd">
-          <textarea value={decrpt} onChange={changeHandler} className="encd" placeholder="Write the text you want to Decrypt."></textarea>
-          <button onClick={clickHandler} className="decd">Decrypt</button>
+          <textarea
+            value={decrpt}
+            onChange={changeHandler}
+            className="encd"
+            placeholder="Write the text you want to Decrypt."
+          ></textarea>
+          <button onClick={clickHandler} className="decd">
+            Decrypt
+          </button>
           <div className="cr"></div>
         </form>
       </div>

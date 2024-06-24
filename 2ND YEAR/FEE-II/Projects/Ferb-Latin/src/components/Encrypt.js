@@ -1,5 +1,7 @@
 import "./Encrypt.css";
 import React,{useState} from "react";
+import { TiArrowBackOutline } from "react-icons/ti";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const Encrypt = () => {
   const[encrpt,setEnncrpt]= useState('');
@@ -32,6 +34,11 @@ const Encrypt = () => {
   return (
     <>
       <div className="Encrypt">
+      <Link to="/">
+          <button className="bkbtn">
+            < TiArrowBackOutline />
+          </button>
+        </Link>
         <div className="clr1"></div>
         <div className="clr2"></div>
         <div className="conte">
