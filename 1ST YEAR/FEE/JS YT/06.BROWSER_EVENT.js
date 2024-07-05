@@ -2,7 +2,7 @@
     function clicked() {
         const pre=document.querySelectorAll(".container")[0].innerHTML;
     document.querySelectorAll(".container")[0].innerHTML =
-        "<b>button was clicked<b>";
+        "<b>button was clicked<b>"; 
     console.log("button was clicked");
     setTimeout(function(){
         document.querySelectorAll(".container")[0].innerHTML=pre;

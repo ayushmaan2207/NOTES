@@ -8,21 +8,18 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [notes, setNotes] = useState(data);
-
-  function addnote(text) {
-    if (text.length > 0) {
-      const obj = {
-        id: 1,
-        tag: "Urgent",
-        desc: text,
-      };
+  
+  function correctId(adno){
+    for (let i = 0; i < adno.length; i++) {
+      adno[i].id = i;
+    }
+  }
+  
+  function addnote(obj) {
       let adno = [...notes, obj];
-      for (let i = 0; i < adno.length; i++) {
-        adno[i].id = i;
-      }
+      correctId(adno);
       toast.success("Note Added");
       setNotes(adno);
-    }
   }
 
   function remove(id) {

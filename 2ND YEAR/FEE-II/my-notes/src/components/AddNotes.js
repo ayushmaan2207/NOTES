@@ -2,25 +2,36 @@ import React, { useState } from "react";
 import "./AddNotes.css";
 
 function AddNotes({ addn }) {
-  const [desc, setDesc] = useState("");
+  const [des, setDesc] = useState("");
+  const [tag, setTags] = useState("");
 
   function notesHandler(event) {
     setDesc(event.target.value);
   }
-  function changeHandler(ids) {
-    console.log(ids);
-  }
+  document.querySelectorAll(".tagi").forEach((tag) => {
+    tag.addEventListener("click", function () {
+        setTags(tag.id);
+    });
+  });
 
   function submitHandler(event) {
-    // to prevent re-render
     event.preventDefault();
-    setDesc("");
+    if (des.length > 0) {
+      const obj = {
+        id: 1,
+        tag: tag,
+        desc: des,
+      };
+      addn(obj);
+      setDesc("");
+    }
   }
 
   return (
     <form className="inpcont" onSubmit={submitHandler}>
       <textarea
-        value={desc}
+        required="required"
+        value={des}
         onChange={notesHandler}
         placeholder="Type..."
         className="inpt"
@@ -28,20 +39,26 @@ function AddNotes({ addn }) {
       />
       <div className="bottom">
         <div className="tagsinput">
-          <label class="container">
-            <input type="radio" name="radio" className="tagi" id="Normal"/>
-            <span class="checkmark" id="Normal"></span>
+          <label className="container">
+            <input type="radio" name="radio" className="tagi" id="Normal" />
+            <span className="checkmark" id="Normal"></span>
           </label>
-          <label class="container">
-            <input type="radio" name="radio" className="tagi" id="Important"/>
-            <span class="checkmark" id="Important"></span>
+          <label className="container">
+            <input
+              required="required"
+              type="radio"
+              name="radio"
+              className="tagi"
+              id="Important"
+            />
+            <span className="checkmark" id="Important"></span>
           </label>
-          <label class="container">
-            <input type="radio" name="radio" className="tagi" id="Urgent"/>
-            <span class="checkmark" id="Urgent"></span>
+          <label className="container">
+            <input type="radio" name="radio" className="tagi" id="Urgent" />
+            <span className="checkmark" id="Urgent"></span>
           </label>
         </div>
-        <button className="add" onClick={() => addn(desc)}>
+        <button type="submit" className="add">
           ADD
         </button>
       </div>
