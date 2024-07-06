@@ -23,6 +23,15 @@
     margin-top: 15vh;
     cursor: pointer;
 }
+.active{
+    background-color: rgba(191, 190, 190, 0.5);
+}
+.tcont:hover{
+    background-color: rgba(191, 190, 190, 0.2);
+}
+.active:hover{
+    background-color: rgba(191, 190, 190, 0.4);
+}
 .tcont{
     width: 100%;
     display: flex;
@@ -69,4 +78,46 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+}
+
+.toggle{
+    margin-right: 5%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 99px;
+    width: 50px;
+    height: 28px;
+    transition: background-color 0.1s ease, border-color 0.2s ease;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(191, 190, 190, 0.5);
+    position: relative;
+}
+
+.toggle .thumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 99px;
+    transform: translateX(0);
+    transition: left 0.15s ease;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+}
+
+.toggle.toggled{
+    background-color: white;
+}
+
+.toggle:hover{
+    background-color: rgba(191, 190, 190, 0.2);
+}
+
+.toggle.toggled .thumb{
+    font-size: 20px;
+    left: calc(50px - 25px);
 }
