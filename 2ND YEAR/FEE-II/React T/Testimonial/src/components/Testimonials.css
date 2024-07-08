@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.card{
+    padding: 50px;
+    background-color: #FAF9F6;
+    width: 40vw;
+    /* height: 40vh; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 15px;
+    gap: 20px;
+}
+.card:hover{
+    box-shadow:5px 5px  20px #56565687;
+}
+.image{
+    position: absolute;
+    left: 5%;
+    top: -15%;
+    z-index: 1;
+}
+.imgg{
+    box-shadow:1px 1px  10px #565656;
+    border-radius: 50%;
+}
+.backimg{
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 5%;
+    top: -4%;
+    background-color: #9055bc;
+    box-shadow:1px 1px  10px #565656;
+
+}
+
+.head,.body,.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.name{
+    font-size: 30px;
+}
+.job{
+    color: #816b92af;
+    text-transform: uppercase;
+}
+.body p{
+    /* width: 70%; */
+    padding: 10px;
+    color: #565656;
+    font-size: 17px;
+}
+.navigate{
+    display: flex;
+    gap: 20px;
+}
+.nn{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.btn{
+    color: #9370ae;
+    background-color: transparent;
+    border: none;
+}
+
+.surprise{
+    background-color: #9370ae;
+    border: none;
+    color: #FAF9F6;border-radius: 5px;
+    font-size: 17px;
+    font-weight:600;
+    padding: 10px 30px;
+}
+
+.surprise:hover{
+    background-color: #9055bc;
+}
+.nn:hover{
+    color: #9055bc;
+}
