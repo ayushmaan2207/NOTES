@@ -1,0 +1,30 @@
+
+.Form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 50px; */
+    width: 30%;
+    gap: 10px;
+}
+.head{
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+.image{
+    height: 50vh;
+}
+.image img{
+    height: 100%;
+}

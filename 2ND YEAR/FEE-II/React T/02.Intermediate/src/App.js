@@ -1,5 +1,5 @@
 import "./App.css";
-import Form from "./components/Form";
+import Login from "./components/Login";
 import Counter from "./components/Counter";
 import { Route, Routes, NavLink, Link } from "react-router-dom";
 // navlink active class lgayega
@@ -14,6 +14,7 @@ function App() {
       
       <nav>
         <ul>
+          <div className="nav">
           <li>
             <NavLink to="/"> Home</NavLink>
           </li>
@@ -23,7 +24,9 @@ function App() {
           <li>
             <NavLink to="/Counter"> Counter</NavLink>
           </li>
+          </div>
 
+          <div className="nav">
           {!isLoggedIn && ( //jab logged in nhi hoga
             <li>
               <Link to="/Login">Log In</Link>
@@ -34,15 +37,16 @@ function App() {
               <Link to="/">Log Out</Link>
             </li>
           )}
+          </div>
         </ul>
       </nav>
 
 
       <Routes>
-        <Route path="/" element={<div>welcome to home page</div>} />
-        <Route path="/Form" element={<Form />} />
+        <Route path="/" element={<b className="texth">Welcome to Home Page</b>} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Counter" element={<Counter />} />
-        <Route path="*"element={<img src="emptystate.png" alt="Page Not Found" />} />
+        <Route path="*"element={<img src="notfound.png" alt="Page Not Found" />} />
       </Routes>
     </div>
   );
