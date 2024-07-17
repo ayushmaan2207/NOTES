@@ -8,20 +8,79 @@
 }
 
 form{
-    background-color: #fff;
+    margin-top: 75px;
+    background-color: #ffffff8f;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 50px; */
-    width: 30%;
+    padding: 20px 50px;
     gap: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.228);
 }
 .head{
     align-self: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+sup{
+    color: red;
+}
+input{
+    width: 100%;
+    height: 25px;
+    align-self: center;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+input.notfilled{
+    border: 2px solid red;
+    padding: 4px;
+}
+.passt{
+    display: none;
+    color: red;
+}
+.passt.notfilled{
+    display: block;
+    align-self: center;
+}
+.pass{
+    display: flex;
+    gap: 30px;
+}
+.pas1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.check{
+    display: flex;
+    align-self: center;
+    gap: 5px;
+}
+.check input{
+    width: 15px;
+    margin: 0;
+}
+.butn{
+    align-self: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    background-color: #2a76c2;
+    color: white;
+}
+.butn:hover{
+    background-color: #005ebc;
 
-
+}
 .image{
     height: 50vh;
 }

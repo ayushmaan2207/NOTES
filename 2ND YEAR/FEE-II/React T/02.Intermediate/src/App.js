@@ -1,13 +1,12 @@
 import "./App.css";
-import Login from "./components/Login";
 import Counter from "./components/Counter";
+import Login from "./components/Login";
 import { Route, Routes, NavLink, Link } from "react-router-dom";
 // navlink active class lgayega
 import { useState } from "react";
 
 function App() {
   const [isLoggedIn, setisLoggedIn] = useState(false);
-
   return (
     <div className="App">
 
@@ -34,7 +33,9 @@ function App() {
           )}
           {isLoggedIn && ( //jab logged in hoga
             <li>
-              <Link to="/">Log Out</Link>
+              <Link to="/" onClick={()=>{
+                setisLoggedIn(false)
+              }}>Log Out</Link>
             </li>
           )}
           </div>
@@ -44,7 +45,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<b className="texth">Welcome to Home Page</b>} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login"  element={<Login  setisLoggedIn={setisLoggedIn}/>} />
         <Route path="/Counter" element={<Counter />} />
         <Route path="*"element={<img src="notfound.png" alt="Page Not Found" />} />
       </Routes>

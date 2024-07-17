@@ -1,32 +1,54 @@
 import React from "react";
 import { useState } from "react";
 import "./Login.css";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ setisLoggedIn }) {
+  const [conPassVis, setConPassVis] = useState(false);
+  const [passVis, setPassVis] = useState(false);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    country: "India",
-    streetAddress: "",
-    city: "",
-    state: "",
-    postalCode: "",
-    comments: false,
-    candidate: false,
-    offers: false,
-    pushNotification: "",
+    Pass: "",
+    confirmPass: "",
+    remMe: false,
   });
+  function checkPass() {
+    let allFilled = true;
+    document.querySelectorAll(".required").forEach((ele) => {
+      if (formData[ele.name] === "") {
+        ele.classList.add("notfilled");
+        allFilled = false;
+      } else {
+        ele.classList.remove("notfilled");
+      }
+    });
 
+    if (
+      formData.Pass === formData.confirmPass &&
+      formData.Pass.length > 0 &&
+      formData.confirmPass.length > 0
+    ) {
+      setisLoggedIn(true);
+      navigate("/");
+    } else if (formData.Pass.length > 0 || formData.confirmPass.length > 0) {
+      document.querySelector(".passt").classList.add("notfilled");
+    }
+  }
   function changeHandler(event) {
     const { name, value, checked, type } = event.target;
-    setFormData((prev) => {
-      return { ...prev, [name]: type === "checkbox" ? checked : value };
-    });
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   }
 
   function submitHandler(event) {
     event.preventDefault();
+    checkPass();
   }
 
   return (
@@ -38,19 +60,39 @@ function Login() {
           <h3>
             First Name <sup>*</sup>
           </h3>
-          <input required type="text" />
+          <input
+            className="required"
+            placeholder="First Name"
+            value={formData.firstName}
+            name="firstName"
+            onChange={changeHandler}
+            type="text"
+          />
         </label>
 
         <label>
           <h3>Last Name</h3>
-          <input type="text" />
+          <input
+            placeholder="Last Name"
+            value={formData.lastName}
+            name="lastName"
+            onChange={changeHandler}
+            type="text"
+          />
         </label>
 
         <label>
           <h3>
             Email <sup>*</sup>
           </h3>
-          <input required type="email" />
+          <input
+            className="required"
+            placeholder="Enter Email"
+            value={formData.email}
+            name="email"
+            onChange={changeHandler}
+            type="email"
+          />
         </label>
 
         <div className="pass">
@@ -58,18 +100,62 @@ function Login() {
             <h3>
               Password <sup>*</sup>
             </h3>
-            <input required type="password" />
+            <div className="pas1">
+              <input
+                minLength={8}
+                className="required"
+                placeholder="Enter Password"
+                value={formData.Pass}
+                name="Pass"
+                onChange={changeHandler}
+                type={passVis ? "text" : "password"}
+              />
+              <span
+                onClick={() => {
+                  setPassVis(!passVis);
+                }}
+              >
+                {passVis ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+              </span>
+            </div>
           </label>
           <label>
             <h3>
               Confirm Password <sup>*</sup>
             </h3>
-            <input required type="password" />
+            <div className="pas1">
+              <input
+                minLength={8}
+                className="required"
+                placeholder="Enter Password"
+                value={formData.confirmPass}
+                name="confirmPass"
+                onChange={changeHandler}
+                type={conPassVis ? "text" : "password"}
+              />
+              <span
+                onClick={() => {
+                  setConPassVis(!conPassVis);
+                }}
+              >
+                {conPassVis ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+              </span>
+            </div>
+            <span className="passt">password do not match</span>
           </label>
         </div>
-
-        <button>Log In</button>
+        <div className="check">
+          <input
+            name="remMe"
+            value={formData.remMe}
+            onChange={changeHandler}
+            type="checkbox"
+          />
+          <span>Remember Me</span>
+        </div>
+        <button className="butn">Log In</button>
       </form>
+
       <div className="image">
         <img src="login.png" alt="login" />
       </div>
