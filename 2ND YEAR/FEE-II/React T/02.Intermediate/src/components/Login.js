@@ -17,11 +17,9 @@ function Login({ setisLoggedIn }) {
     remMe: false,
   });
   function checkPass() {
-    let allFilled = true;
     document.querySelectorAll(".required").forEach((ele) => {
       if (formData[ele.name] === "") {
         ele.classList.add("notfilled");
-        allFilled = false;
       } else {
         ele.classList.remove("notfilled");
       }
