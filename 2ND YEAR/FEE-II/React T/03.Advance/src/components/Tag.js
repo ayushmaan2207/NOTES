@@ -1,36 +1,17 @@
 import "./Tag.css";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, {useState } from "react";
 import { Mosaic } from "react-loading-indicators";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
-console.log("API Key:", API_KEY);
+import useGif from "../hooks/useGif";
 
 const Tag = () => {
-  const [gif, setGif] = useState("");
   const [tag, setTag] = useState("");
-  const [load, setLoad] = useState(true);
+  const {gif,load,fetchData}= useGif(tag);
+
 
   function changeHandler(event){
     setTag(event.target.value);
   }
 
-  async function fetchData() {
-    setLoad(true);
-    const url = `https://api.giphy.com/v1/gifs/random?api_key=HkUQ363NYorKXGUe2iMkduBdTPyBD8gM&tag=${tag}`;
-    const { data } = await axios.get(url);
-    const imgSource = data.data.images.downsized_large.url;
-    setGif(imgSource);
-    setLoad(false);
-  }
-
-  useEffect(() => {
-    fetchData();
-  },[]);
-
-  function clickHandler() {
-    fetchData();
-  }
 
   return (
     <div className="Tag">
@@ -53,7 +34,7 @@ const Tag = () => {
     onChange={changeHandler}
       value={tag}
     />
-      <button onClick={clickHandler}>GENERATE</button>
+      <button onClick={()=> fetchData()}>GENERATE</button>
     </div>
   );
 };
