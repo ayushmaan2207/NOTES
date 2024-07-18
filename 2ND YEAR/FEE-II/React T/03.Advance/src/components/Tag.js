@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Mosaic } from "react-loading-indicators";
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+console.log("API Key:", API_KEY);
+
 const Tag = () => {
   const [gif, setGif] = useState("");
   const [tag, setTag] = useState("");
@@ -23,7 +26,7 @@ const Tag = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  },[]);
 
   function clickHandler() {
     fetchData();
@@ -43,7 +46,7 @@ const Tag = () => {
           <p>loading...</p>
         </div>
       ) : (
-        <img src={gif} />
+        <img src={gif} alt={tag} />
       )}
     <input type="text" 
     placeholder="type..."

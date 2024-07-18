@@ -3,7 +3,8 @@ import "./Random.css";
 import axios from "axios";
 import { Mosaic } from "react-loading-indicators";
 
-const API_KEY = process.env.API_key;
+
+
 
 const Random = () => {
   const [gif, setGif] = useState("");
@@ -40,7 +41,7 @@ const Random = () => {
           <p>loading...</p>
         </div>
       ) : (
-        <img src={gif} />
+        <img src={gif} alt='gif' />
       )}
 
       <button onClick={clickHandler}>GENERATE</button>
