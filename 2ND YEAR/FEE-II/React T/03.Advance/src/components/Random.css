@@ -1,0 +1,32 @@
+.Random{
+    background-color: rgba(245, 245, 220, 0.63);
+    border: 1px solid rgb(71, 71, 71);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+.load{
+    display: flex;
+    height:300px;
+    margin: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    margin-bottom: 30px;
+    height:300px;
+}
+button{
+    margin-bottom: 30px;
+    background-color: black;
+    color: beige ;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 15px;
+}
