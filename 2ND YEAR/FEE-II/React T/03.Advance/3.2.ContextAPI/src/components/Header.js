@@ -3,7 +3,13 @@ import "./Header.css"
 const Header = () => {
   return (
     <div className="Header">
-      BLOGS / NEWS
+      <div className="navigate">
+        <ul>
+          <li>HOME</li>
+          <li>ABOUT</li>
+          <li>CONTACT US</li>
+        </ul>
+      </div>
     </div>
   )
 }

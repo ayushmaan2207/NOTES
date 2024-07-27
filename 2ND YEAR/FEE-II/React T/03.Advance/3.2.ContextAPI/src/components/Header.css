@@ -1,9 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .Header{
     background-color: #a55858;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7vh;
+    height: 45vh;
     font-weight: 600;
     font-size: 20px;
+    background: url("C:\Users\ayush\CHITKARA\2ND YEAR\FEE-II\React T\03.Advance\3.2.ContextAPI\public\banner.png");
+    background-position:top;
+    background-size:cover;
+}
+.navigate ul{
+    display: flex;
+    gap: 5%;
+    list-style: none;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: rgb(223, 48, 0);
 }
