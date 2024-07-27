@@ -1,0 +1,26 @@
+.Paging{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.button{
+    display: flex;
+    gap: 10px;
+}
+.button button{
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid orangered;
+    border-radius: 10px;
+}
+.button button:hover{
+    background-color: orangered;
+    color: white;
+}
+.paging{
+    font-size: 17px;
+    font-weight: 600;
+}

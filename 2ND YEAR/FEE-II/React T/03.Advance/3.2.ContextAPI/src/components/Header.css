@@ -4,19 +4,20 @@
 }
 
 .Header{
-    background-color: #a55858;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45vh;
+    height: 40vh;
     font-weight: 600;
     font-size: 20px;
     background: url("C:\Users\ayush\CHITKARA\2ND YEAR\FEE-II\React T\03.Advance\3.2.ContextAPI\public\banner.png");
-    background-position:top;
+    background-position:left;
     background-size:cover;
 }
 .navigate ul{
     display: flex;
+    height: 5vh;
     gap: 5%;
     list-style: none;
     width: 100vw;
@@ -26,5 +27,13 @@
     top: 0;
     left: 0;
     padding: 10px;
-    color: rgb(223, 48, 0);
+    background-color: #D3E7E5;
+    color: #130059;
+    font-weight: 600;
+    font-size: 22px;
+    box-shadow: 1px 1px 5px #D3E7E5;
+    cursor: pointer;
+}
+li:hover{
+    color: orangered;
 }
