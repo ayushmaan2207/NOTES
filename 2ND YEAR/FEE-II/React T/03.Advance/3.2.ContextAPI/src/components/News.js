@@ -21,7 +21,7 @@ const News = () => {
             <p>loading...</p>
           </div>
         ) : posts.length === 0 ? (
-          <div>
+          <div className="load">
             <img src="notfound.png" alt="page not found" />
           </div>
         ) : (

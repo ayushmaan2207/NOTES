@@ -29,7 +29,7 @@ const BlogPage = () => {
       const updatedPosts = await Promise.all(
         data.relatedBlogs.map(async (post) => {
           const response = await fetch(
-            "https://picsum.photos/500/200?random=1"
+            "https://picsum.photos/500/250?random=1"
           );
           data.blog.img = response.url;
           post.img = response.url;
@@ -58,26 +58,28 @@ const BlogPage = () => {
       </button>
       {load ? (
         <div className="load">
-        <ThreeDot
-          color={["#254886", "#00b3ff", "#256986", "#6396ee"]}
-          size="medium"
-          speedPlus="1"
-          easing="ease-in-out"
-        />
-        <p>loading...</p>
-      </div>
+          <ThreeDot
+            color={["#254886", "#00b3ff", "#256986", "#6396ee"]}
+            size="medium"
+            speedPlus="1"
+            easing="ease-in-out"
+          />
+          <p>loading...</p>
+        </div>
       ) : blog ? (
         <div className="blog">
-          <BlogDetail post={blog} />
+          <BlogDetail post={blog} index="0"/>
           <h2 className="heading">Related News</h2>
           <div className="relcontainer">
-            {relatedBlog.map((post,index) => (
-              <BlogDetail post={post} index={index}/>
+            {relatedBlog.map((post) => (
+              <BlogDetail post={post} />
             ))}
           </div>
         </div>
       ) : (
-        <p>No Blog found</p>
+        <div className="load">
+          <img src="notfound.png" alt="page not found" />
+        </div>
       )}
     </div>
   );
