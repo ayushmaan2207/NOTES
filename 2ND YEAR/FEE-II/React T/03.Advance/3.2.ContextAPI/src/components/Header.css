@@ -14,6 +14,8 @@
     background: url("C:\Users\ayush\CHITKARA\2ND YEAR\FEE-II\React T\03.Advance\3.2.ContextAPI\public\banner.png");
     background-position:left;
     background-size:cover;
+    box-shadow: 1px 1px 5px rgb(150, 150, 150);
+
 }
 .navigate ul{
     display: flex;
@@ -33,6 +35,7 @@
     font-size: 22px;
     box-shadow: 1px 1px 5px #D3E7E5;
     cursor: pointer;
+    z-index: 999;
 }
 li:hover{
     color: orangered;

@@ -15,10 +15,20 @@ export default function AppContextProvider({children}){
         try {
             const result= await fetch(url);
             const data = await result.json();
-            // console.log(data);
+            console.log(data);
             setPage(data.page);
             setPosts(data.posts);
             setTpage(data.totalPages);
+
+
+            const updatedPosts = await Promise.all(
+                data.posts.map(async (post) => {
+                  const response = await fetch("https://picsum.photos/500/200?random=1");
+                  post.img = response.url;
+                  return post;
+                })
+            );
+
         } 
         catch (error) {
             console.log("data");

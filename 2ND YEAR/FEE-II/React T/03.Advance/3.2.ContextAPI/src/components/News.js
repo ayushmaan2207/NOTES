@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { AppContext } from "../context/AppContext";
 import { ThreeDot } from "react-loading-indicators";
-import Card from "./Card";
 import "./News.css";
 
 const News = () => {
@@ -28,10 +27,33 @@ const News = () => {
           </div>
         ) : posts.length === 0 ? (
           <div>
-            <p>No News Found</p>
+            <img src="notfound.png" alt="page not found" />
           </div>
         ) : (
-          posts.map((post,index) => <Card index={index+1} post={post} key={index} />)
+          posts.map((post, index) => (
+            <div
+              key={index}
+              style={{ gridArea: `item${index}` }}
+              className={`Card card${index}`}
+            >
+              <div className="imgcont">
+                <img className="image" src={post.img} alt="Random" />
+              </div>
+              <div className="text">
+                <p className="title">{post.title}</p>
+                <p className="author">
+                  By <span>{post.author}</span> on <span>{post.category}</span>
+                </p>
+                <p className="date">Posted on {post.date}</p>
+                <p className="content">{post.content}</p>
+                <div className="tags">
+                  {post.tags.map((tag, index) => (
+                    <span key={index}>{` #${tag}`}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
         )}
       </div>
     </div>
