@@ -10,7 +10,7 @@ const dbConnect=()=>{
     .catch((error)=>{
         console.log("Issue in DB connection");
         console.error(error.message);
-        // iska kya mtlb??????
+        // Inform any monitoring tools or services that the application has crashed due to an error
         process.exit(1);
     })
 }
