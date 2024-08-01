@@ -1,6 +1,6 @@
 // npm i mongoose - to set connection in mongodb
 
-// npm i dotenv - to import all ele in folder
+// npm i dotenv - to import all ele in process object
 require("dotenv").config();
 
 const mongoose= require("mongoose");
