@@ -3,13 +3,14 @@ const Todo = require("../models/Todo")
 
 // define route handler
 
-exports.createTodo =  async(req,res)=>{
+exports.updateTodo =  async(req,res)=>{
     try {
-        //  extract title and description  from request body
+        const {id} = req.params;
         const {title,description} = req.body;
-        // create a new todo obj and insert in DB
-        const response = await Todo.create({title,description});
-        // send a json response with a green flag
+        const todo= await Todo.findByIdAndUpdate(
+            {_id:id},
+            {title,description,updatedAt:Date.now()},
+        )
         res.status(200).json(
             {
                 success:true,
