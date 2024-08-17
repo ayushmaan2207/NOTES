@@ -14,8 +14,8 @@ exports.updateTodo =  async(req,res)=>{
         res.status(200).json(
             {
                 success:true,
-                data:response,
-                message:"Entry Created Successfully"
+                data:todo,
+                message:"updated Successfully"
             }
         )
     } catch (err) {
