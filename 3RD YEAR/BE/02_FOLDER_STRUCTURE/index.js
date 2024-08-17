@@ -13,4 +13,22 @@ const PORT= process.env.PORT || 4000;
 // middleware to parse json request body
 app.use(express.json());
 
-// import routes dor todo api
+// import routes for todo api
+const todoRoutes = require("./routes/todo");
+const { connect } = require("mongoose");
+// mount the todo API routes
+app.use("/api/v1",todoRoutes);
+
+// start server
+app.listen(PORT,()=>{
+    console.log(`app started at port no. ${PORT}`);
+})
+
+// connect to the database
+const dbConnect = require("./config/database");
+dbConnect();
+
+// default route
+app.get("/",(req,res)=>{
+    res.send(`<h1>This is HOME PAGE</h1>`)
+})
