@@ -1,6 +1,6 @@
 public class _01_BASIC {
     public static void main(String[] var0) throws Exception {
-       System.out.println("Hello Ji ( ``3)"); //typr sout for print shortcut
+       System.out.println("Hello Ji ( ``3)"); //type sout for print shortcut
 
         // Data Types
 
