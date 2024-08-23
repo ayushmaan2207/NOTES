@@ -11,7 +11,7 @@ public class _01_BASIC {
         return  a%b;
     }
 
-    public static void main(String[] var0) throws Exception {
+    public static void main(String[] var0){
     //    System.out.println("Hello Ji ( ``3)"); //type sout for print shortcut
 
         // Data Types
