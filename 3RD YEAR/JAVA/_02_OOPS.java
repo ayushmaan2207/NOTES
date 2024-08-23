@@ -3,7 +3,7 @@ class Pen{
     String type;
 
     Pen(){
-        System.out.println("constructor bngya");
+        // System.out.println("constructor bngya");
     }
 
     Pen(String color,String type){
@@ -36,9 +36,9 @@ class PilotPen extends Pen{
 
 public class _02_OOPS {
     public static void main(String[] args){
-        // Pen pen1= new Pen();
-        // pen1.color="red";
-        // pen1.type="gel";
+        Pen pen1= new Pen();
+        pen1.color="red";
+        pen1.type="gel";
         // pen1.write();
         
         Pen pen2= new Pen("black","ball");
@@ -49,8 +49,8 @@ public class _02_OOPS {
         Pen pen3= new Pen(pen2);
         // pen3.write();
 
-        pen3.printInfo(pen3.color);
-        pen3.printInfo(pen3.color,pen3.type);
+        // pen3.printInfo(pen3.color);
+        // pen3.printInfo(pen3.color,pen3.type);
 
         // inheritance
         PilotPen v7= new PilotPen();
