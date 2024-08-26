@@ -3,6 +3,9 @@
 
 // npm i nodemon
 
+// npm i mongoose - to set connection in mongodb
+// npm i dotenv - to import all ele in process object
+
 //  require statement imports 
 const express =  require("express");
 const app=express();
