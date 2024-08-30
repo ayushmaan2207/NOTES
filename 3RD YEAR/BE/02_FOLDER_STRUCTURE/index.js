@@ -7,31 +7,30 @@
 // npm i dotenv - to import all ele in process object
 
 //  require statement imports 
-const express =  require("express");
-const app=express();
+const express = require('express');
+const app = express();
 
 require("dotenv").config();
-const PORT= process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 // middleware to parse json request body
 app.use(express.json());
-
 // import routes for todo api
-const todoRoutes = require("./routes/todo");
-const { connect } = require("mongoose");
-// mount the todo API routes
-app.use("/api/v1",todoRoutes);
+const blog = require('./routes/blog');
 
-// start server
-app.listen(PORT,()=>{
-    console.log(`app started at port no. ${PORT}`);
-})
+// mount the todo API routes
+app.use("/api/v1",blog);
 
 // connect to the database
-const dbConnect = require("./config/database");
+const dbConnect = require('./config/database');
 dbConnect();
 
-// default route
-app.get("/",(req,res)=>{
-    res.send(`<h1>This is HOME PAGE</h1>`)
+// Start Server 
+app.listen(PORT,()=>{
+    console.log("App is Running at the",PORT);
+})
+
+// Default Route 
+app.get('/', (req,res) => {
+    res.send(`<h1>HomePage</h1>`)
 })
