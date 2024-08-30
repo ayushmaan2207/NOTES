@@ -32,5 +32,5 @@ app.listen(PORT,()=>{
 
 // Default Route 
 app.get('/', (req,res) => {
-    res.send(`<h1>HomePage</h1>`)
+    res.send(`<h1>HomePage of BLOG</h1>`)
 })
