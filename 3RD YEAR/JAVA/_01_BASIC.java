@@ -43,7 +43,7 @@ public class _01_BASIC {
             name2= name.replace("Ayush", "Ayushmaan Thakur");
             // System.out.println(name2);
             // System.out.println(name);
-            // System.out.println(name3.substring(5, 12));
+            // System.out.println(name3.substring(5, 5+1));
         
         // Array
 
