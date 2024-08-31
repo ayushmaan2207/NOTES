@@ -76,6 +76,14 @@ public class _01_BASIC {
             int fprice= price+ (int)18.99;
             // System.out.println(fprice);
 
+            String m="234567";
+            int n= Integer.parseInt(m);
+            // System.out.println(n);
+
+            int x=34;
+            String y= "adf" + String.valueOf(x);
+            // System.out.println(y);
+
         // Constrants
 
             final float PI =3.14F;
