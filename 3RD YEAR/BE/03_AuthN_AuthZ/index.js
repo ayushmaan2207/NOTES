@@ -9,8 +9,8 @@ app.use(express.json());
 const dbConnect = require("./config/database");
 dbConnect();
 
-// const user = require("./routes/user")
-// app.use("/api/v1",user);
+const user = require("./routes/user")
+app.use("/api/v1",user);
 
 app.listen(PORT,()=>{
     console.log(`App is listening at ${PORT}`);
