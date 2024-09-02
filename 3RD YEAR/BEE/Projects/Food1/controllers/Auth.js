@@ -74,31 +74,28 @@ exports.login= async(req,res)=>{
         // check for registered user
         const user = await User.findOne({email});
         if(!user){
-            return res.render('login');
-            // return res.status(401).json({
-            //     success:false,
-            //     message:"User is not registered",
-            // })
+            return res.render("login",{
+                userExists:false,
+                passCorrect:true
+            });
         }
 
         // verify password & generate a JWT token
         if(await bcrypt.compare(password,user.password)){
-            const user = await User.create({
-                email,password
-            })
-            return res.status(200).json({
-                success:true,
-                message:"Authentic User",
-            })
+            return res.render("home");
         }
         else{
-            return res.status(403).json({
-                success:false,
-                message:"Password Incorrect",
-            })
+            return res.render("login",{
+                userExists:true,
+                passCorrect:false
+            });
         }
     }  
     catch(e){
-
+        console.error(e);
+        return res.status(500).json({
+            success:false,
+            message:"Somthing went wrong",
+        });
     }  
 }

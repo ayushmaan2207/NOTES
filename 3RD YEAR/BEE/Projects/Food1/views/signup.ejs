@@ -7,10 +7,12 @@
   </head>
   <body>
     <form method="POST" action="/signup">
+      
       <h1>Sign Up</h1>
       <% if(alreadyUser) { %>
         <h3>User Already Exists</h3>
       <% } %>
+
       <label>
         Name <sup>*</sup>
         <input name="name" type="text" placeholder="Enter your Name" required />
