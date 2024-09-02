@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const User= require("../models/User");
 const { response } = require("express");
 
-// signup
+// signup 
 exports.signup= async(req,res)=>{
     try{
         // get data
