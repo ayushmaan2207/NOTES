@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <form method="POST" action="/signup">
+      <h1>Sign Up</h1>
+      <% if(alreadyUser) { %>
+        <h3>User Already Exists</h3>
+      <% } %>
+      <label>
+        Name <sup>*</sup>
+        <input name="name" type="text" placeholder="Enter your Name" required />
+      </label>
+      <label>
+        Email <sup>*</sup>
+        <input name="email" type="email" placeholder="Enter your Email" required />
+      </label>
+      <label>
+        Password <sup>*</sup>
+        <input name="password" type="password" placeholder="Enter your password" required />
+      </label>
+      <button>Sign Up</button>
+      <label>
+        Already a user?
+        <a href="/">Log In</a>
+      </label>
+    </form>
+  </body>
+</html>
