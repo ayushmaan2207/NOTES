@@ -82,9 +82,9 @@ exports.login= async(req,res)=>{
 
         // verify password & generate a JWT token
         if(await bcrypt.compare(password,user.password)){
-            return res.status(401).json({
-                success:false,
-                message:"User is not registered",
+            return res.status(200).json({
+                success:true,
+                message:"Authentic User",
             })
         }
         else{
