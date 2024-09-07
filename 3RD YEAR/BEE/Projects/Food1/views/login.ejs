@@ -6,15 +6,30 @@
     <title>Log In</title>
   </head>
   <body>
-    <form method="POST" action="/">
+    <form method="POST" action="/login">
       <h1>Log In</h1>
+      <% if(!userExists) { %>
+      <h3>Invalid Email Id</h3>
+      <% } %> <% if(userExists && !passCorrect) { %>
+      <h3>Incorrect Password</h3>
+      <% } %>
       <label>
         Email <sup>*</sup>
-        <input name="email" type="email" placeholder="Enter your Email" required />
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter your Email"
+          required
+        />
       </label>
       <label>
         Password <sup>*</sup>
-        <input name="password" type="password" placeholder="Enter your password" required />
+        <input
+          name="password"
+          type="password"
+          placeholder="Enter your password"
+          required
+        />
       </label>
       <button>Log In</button>
       <label>
