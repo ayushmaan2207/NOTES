@@ -1,5 +1,5 @@
 // npm install bcrypt
-// npm install jsonwebtoken
+// npm i jsonwebtoken
 
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
