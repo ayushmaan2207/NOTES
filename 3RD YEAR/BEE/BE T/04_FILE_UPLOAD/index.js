@@ -1,5 +1,6 @@
 // npm i cloudinary
 // npm i express-fileupload
+// npm i nodemailer
 
 // create app
 const express= require("express");
