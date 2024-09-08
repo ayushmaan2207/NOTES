@@ -21,4 +21,5 @@ router.get("/admin",auth,isAdmin, (req,res)=>{
         message:"Welcome to the Protected route for Admin",
     });
 });
+
 module.exports= router;
