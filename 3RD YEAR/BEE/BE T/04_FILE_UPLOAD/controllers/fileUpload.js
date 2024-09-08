@@ -7,7 +7,7 @@ exports.localFileUpload = async(req,res)=>{
 
         // create file path where file need to be stored on server
         const extention = file.name.split('.')[1];
-        let path = __dirname+ "/files/" +Date.now()+ `.${extention}`;
+        let path = __dirname + "/files/" +Date.now()+ `.${extention}`;
 
         // add path to move function
         file.mv(path,(err)=>{
