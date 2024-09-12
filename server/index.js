@@ -1,0 +1,1 @@
+// npm i express nodemon mongoose dotenv cookie-parser jsonwebtoken nodemailer otp-generator bcrypt
