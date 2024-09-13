@@ -29,7 +29,7 @@ async function sendVerificationEmail(email,otp) {
         throw error;
     }
 }
-
+// calling this function
 OTPSchema.pre("save",async function(next){
     await sendVerificationEmail(this.email,this.otp);
     next();
