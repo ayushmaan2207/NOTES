@@ -62,7 +62,7 @@ exports.resetPassword = async (req, res) => {
           });
     }
     // get user detail form db using token
-    const userDetails=await user.findOne({token:token});
+    const userDetails=await User.findOne({token:token});
     if(!userDetails){
         return res.json({
             success: false,
