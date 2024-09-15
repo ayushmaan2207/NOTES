@@ -1,5 +1,5 @@
 const Course=require("../models/Course");
-const Tag=require("../models/Tags");
+const Category=require("../models/Category");
 const User=require("../models/User");
 const {uploadImagesToCloudinary}= require("../utils/imageUploader");
 
