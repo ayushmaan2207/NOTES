@@ -33,6 +33,24 @@ class Pen{
 class PilotPen extends Pen{
 
 }
+// INTERFACE
+interface bycycle{
+    int a=45;
+    void applyBreak(int dec);
+    void speedup(int inc);
+}
+// inheritance in Interface
+interface HeroCycle extends bycycle{
+
+}
+class AvonCycle implements HeroCycle{
+    public void applyBreak(int dec){
+        System.out.println("Slowing down");
+    }
+    public void speedup(int inc){
+        System.out.println("Speeding Up");
+    }
+}
 
 public class _02_OOPS {
     public static void main(String[] args){
@@ -56,5 +74,10 @@ public class _02_OOPS {
         PilotPen v7= new PilotPen();
         v7.color="blue";
 
+
+        AvonCycle c1 = new AvonCycle();
+        c1.applyBreak(1);
+        // c1.a=69; // cannot change value in interface it will be final
+        System.out.println(c1.a);
     }
 }
