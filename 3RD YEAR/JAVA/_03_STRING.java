@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class _03_STRING {
     public static void main(String[] args) {
@@ -31,14 +32,40 @@ public class _03_STRING {
         // System.out.println(nts.charAt(3));
         // System.out.println(nts.indexOf("o",5));
         // System.out.println(nts.lastIndexOf("o",5));
-
+        
         String ay= "ayush";
         // System.out.println(ay.equals("AyuSh"));
         // System.out.println(ay.equalsIgnoreCase("AyuSh"));
-
-    // escape sequence   
+        
+        // escape sequence   
         // System.out.println("\\ \n \' \t \" ");
 
+    // String Builder
+        StringBuilder sb = new StringBuilder("Pyush");
+        // System.out.println(sb);
+
+        // System.out.println(sb.charAt(3));
+        sb.setCharAt(0,'A');
+        // System.out.println(sb);
         
+        sb.insert(3,'@');
+        // System.out.println(sb);
+        
+        // sb.delete(3, 6);
+        sb.deleteCharAt(3);
+        // System.out.println(sb);
+        
+        sb.append("maan");
+        // System.out.println(sb);
+    
+    // String Tokenizer
+        StringTokenizer st = new StringTokenizer("This is a dog") ;
+        StringTokenizer st1 = new StringTokenizer("This,is,a,cat",",") ;
+
+        while(st.hasMoreTokens()){
+            System.out.println(st.nextToken());
+        }
+
+
     }
 }
