@@ -17,6 +17,13 @@ public class _03_STRING {
         // System.out.printf("The val of a is %d & b is %f",a,b);
         // System.out.format("The val of a is %d & b is %f",a,b);
 
+    // Split Method
+        String ref= "My name is Ayushmaan, I am Reflection Head!";
+        String arr[] = ref.split("[ !,]");
+        for(int i=0;i<arr.length;i++){
+            // System.out.println(arr[i]);
+        }
+
     // String Methods
         // System.out.print("\nEnter your name: ");
         // String naam= sc.next();
@@ -60,10 +67,10 @@ public class _03_STRING {
     
     // String Tokenizer
         StringTokenizer st = new StringTokenizer("This is a dog") ;
-        StringTokenizer st1 = new StringTokenizer("This,is,a,cat",",") ;
+        StringTokenizer st1 = new StringTokenizer("This is a,cat."," ,.") ;
 
-        while(st.hasMoreTokens()){
-            System.out.println(st.nextToken());
+        while(st1.hasMoreTokens()){
+            System.out.println(st1.nextToken());
         }
 
 

@@ -169,6 +169,12 @@ public class _01_BASIC {
             }while(k<6);
 
         // EXCEPTION HANDLING
+        
+            // Syntax Error
+            // System.out.print(a);
+
+            // Logical Error - bugs 
+            // Runtime Error - api faliure
 
             int[] mark ={ 97,98,95};
             try {
