@@ -75,15 +75,17 @@ public class _01_BASIC {
             int price=100;
             int fprice= price+ (int)18.99;
             // System.out.println(fprice);
-
+//
             String m="234567";
             int n= Integer.parseInt(m);
             // System.out.println(n);
-
+            String pass = "art356";
+            boolean isDig= Character.isDigit(pass.charAt(4));
+            // System.out.println(isDig);
             int x=34;
             String y= "adf" + String.valueOf(x);
             // System.out.println(y);
-
+//
         // Constrants
 
             final float PI =3.14F;
@@ -184,6 +186,9 @@ public class _01_BASIC {
                 System.out.println("Marks nhi hai");
             }
             // System.out.println("student name is Ayush");
+
+
+            System.out.println(1 + 2 * 3 + 7 * 2 % 5);
 
         // METHODS [function]
             // print();
