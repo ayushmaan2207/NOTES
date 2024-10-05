@@ -1,101 +1,90 @@
-const User = require("../models/User");
-const bcrypt = require("bcrypt");
-const mailSender = require("../utils/mailSender");
-
-// resetPasswordToken
+const User = require("../models/User")
+const mailSender = require("../utils/mailSender")
+const bcrypt = require("bcrypt")
+const crypto = require("crypto")
 exports.resetPasswordToken = async (req, res) => {
   try {
-    // get email from req body
-    const { email } = req.body;
-    // check user for this email, email verification
-    const user = await User.findOne({ email });
+    const email = req.body.email
+    const user = await User.findOne({ email: email })
     if (!user) {
       return res.json({
         success: false,
-        message: "Your email is not registered",
-      });
+        message: `This Email: ${email} is not Registered With Us Enter a Valid Email `,
+      })
     }
-    // generate token
-    const token = crypto.randomUUID();
-    // update user by adding token & expiration time
+    const token = crypto.randomBytes(20).toString("hex")
+
     const updatedDetails = await User.findOneAndUpdate(
-      { email },
+      { email: email },
       {
         token: token,
-        resetPasswordExpires: Date.now() + 5 * 60 * 1000,
+        resetPasswordExpires: Date.now() + 3600000,
       },
       { new: true }
-    );
-    // create url
-    const url = `http://localhost:3000/update-password/${token}`;
-    // send mail containing the url
+    )
+    console.log("DETAILS", updatedDetails)
+
+    // const url = `http://localhost:3000/update-password/${token}`
+    const url = `https://codeplay-edtech-project.vercel.app/update-password/${token}`
+
     await mailSender(
       email,
-      "Password Reset Link",
-      `Password Reset Link: ${url}`
-    );
+      "Password Reset",
+      `Your Link for email verification is ${url}. Please click this url to reset your password.`
+    )
 
-    return res.status(200).json({
+    res.json({
       success: true,
       message:
-        "Reset Link email sent successfully, please check email and change password",
-    });
+        "Email Sent Successfully, Please Check Your Email to Continue Further",
+    })
   } catch (error) {
-    console.log(error);
-    return res.status(500).json({
+    return res.json({
+      error: error.message,
       success: false,
-      message: "Somthing went wrong while sending Reset password mail ",
-    });
+      message: `Some Error in Sending the Reset Message`,
+    })
   }
-};
+}
 
-// resetPassword
 exports.resetPassword = async (req, res) => {
   try {
-    // data fetch
-    const {password,confirmPassword,token}=req.body;
-    // validation
-    if(password!==confirmPassword){
-        return res.json({
-            success: false,
-            message: "Password not matching",
-          });
-    }
-    // get user detail form db using token
-    const userDetails=await User.findOne({token:token});
-    if(!userDetails){
-        return res.json({
-            success: false,
-            message: "Invalid token",
-          });
-    }
-    if(userDetails.resetPasswordExpires< Date.now()){
-        return res.json({
-            success: false,
-            message: "token expired",
-          });
-    }
+    const { password, confirmPassword, token } = req.body
 
-    // hash password
-    const hashedPassword= await bcrypt.hash(password,10);
-
-    // update password
+    if (confirmPassword !== password) {
+      return res.json({
+        success: false,
+        message: "Password and Confirm Password Does not Match",
+      })
+    }
+    const userDetails = await User.findOne({ token: token })
+    if (!userDetails) {
+      return res.json({
+        success: false,
+        message: "Token is Invalid",
+      })
+    }
+    if (!(userDetails.resetPasswordExpires > Date.now())) {
+      return res.status(403).json({
+        success: false,
+        message: `Token is Expired, Please Regenerate Your Token`,
+      })
+    }
+    const encryptedPassword = await bcrypt.hash(password, 10)
     await User.findOneAndUpdate(
-        {token:token},
-        {passward:hashedPassword},
-        {new:true}
-    );
-
-    return res.status(200).json({
-        success: true,
-        message: "Password Reset Successfull",
-      });
-
+      { token: token },
+      { password: encryptedPassword },
+      { new: true }
+    )
+    res.json({
+      success: true,
+      message: `Password Reset Successful`,
+    })
   } catch (error) {
-    console.log(error);
-    return res.status(500).json({
+    return res.json({
+      error: error.message,
       success: false,
-      message: "Somthing went wrong while Reseting password",
-    });
+      message: `Some Error in Updating the Password`,
+    })
   }
-};
+}
