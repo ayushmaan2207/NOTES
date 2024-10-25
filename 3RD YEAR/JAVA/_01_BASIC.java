@@ -63,8 +63,22 @@ public class _01_BASIC {
             // System.out.println(marks[2]);
 
         //  // 2D MATRIX
-            int [][] finalMarks={{95,95,98},{97,98,95}};
-            // System.out.println(finalMarks[1][1]);
+            int [][] finalMarks={{1,2},{3,4},{0,6},{5,7},{8,9},{5,9}};
+
+        // sorting in 2d array
+        
+            // Arrays.sort(finalMarks,(a,b)->a[0]-b[0]);
+            // Arrays.sort(finalMarks,(a,b)->b[0]-a[0]);
+            
+            Arrays.sort(finalMarks,(a,b)->a[1]-b[1]);
+            // Arrays.sort(finalMarks,(a,b)->b[1]-a[1]);
+
+            for(int i=0;i<finalMarks.length;i++){
+                for(int j=0;j<finalMarks[i].length;j++){
+                    System.out.print(finalMarks[i][j]+" ");
+                }
+                System.out.print(",");
+            }
 
         // Casting
         
@@ -188,7 +202,7 @@ public class _01_BASIC {
             // System.out.println("student name is Ayush");
 
 
-            System.out.println(1 + 2 * 3 + 7 * 2 % 5);
+            // System.out.println(1 + 2 * 3 + 7 * 2 % 5);
 
         // METHODS [function]
             // print();
