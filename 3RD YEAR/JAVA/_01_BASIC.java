@@ -66,7 +66,7 @@ public class _01_BASIC {
             int [][] finalMarks={{1,2},{3,4},{0,6},{5,7},{8,9},{5,9}};
 
         // sorting in 2d array
-        
+
             // Arrays.sort(finalMarks,(a,b)->a[0]-b[0]);
             // Arrays.sort(finalMarks,(a,b)->b[0]-a[0]);
             

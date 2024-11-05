@@ -34,6 +34,9 @@ public class _11_HEAP {
         minHeap.add(3);
 
         System.out.println(minHeap);
-        System.out.println(minHeap.peek());
+        System.out.println(minHeap.poll());
+        System.out.println(minHeap.poll());
+        System.out.println(minHeap.poll());
+        System.out.println(minHeap.poll());
     }
 }
