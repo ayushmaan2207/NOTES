@@ -7,7 +7,7 @@ const app = express();
 
 // used to parse req.body in express -> PUT or POST
 const bodyParser = require("body-parser");
-// specifically parse JSON data & sdd it to request.Body object
+// specifically parse JSON data & add it to request.Body object
 app.use(bodyParser.json());
 
 // activate the server on 3000 port
