@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" type="text/css" href="/css/addfood.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo" style= " display: flex; flex-direction: row; align-items:center; gap:10px">
+            <img class="logo" style="height:40px; width:40px " src="https://i.pinimg.com/1200x/9c/0e/de/9c0edef80de1893774c8a74883a916f9.jpg" alt="">
+            <h2 style="color:white">Cuisine Connect</h2>
+        </div>
+        <div class="apo">
+            <a href="/admin/reviews" id="AdminOrder"><button class="same">Reviews</button></a>
+
+            <a href="/AdminOrder" id="AdminOrder"><button class="same">Orders</button></a>
+    
+            <a href="/logout" id="logout"><button class="same">Logout</button></a>
+        </div>
+    </header>
+    <div class="admininfo">
+        <h1>Welcome to the <b>Admin Panel</b></h1>
+        <p>Manage your food ordering platform effortlessly with our intuitive admin dashboard. Track orders in real time, update menu items, manage customer details, monitor delivery statuses, and gain insights with detailed analytics—all in one place. Streamline operations and enhance customer satisfaction with ease!</p>
+    </div>
+
+    <div class="afi">
+        <div class="form-section">
+            <h1>Add Food Item</h1>
+            <form action="/admin" method="post" enctype="multipart/form-data" class="add-food-form">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image" required>
+    
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+    
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" required>
+    
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+        <div class="efi">
+            <h1>Menu</h1>
+            <div class="foodcont">
+                <% foods.forEach(food => { %>
+                    <div class="food-item">
+                        <div class="old">
+                            <img src="/Images/<%= food.image %>" alt="<%= food.name %>">
+                            <h2><%= food.name %></h2>
+                            <p><b>Price:</b> Rs.<%= parseFloat(food.price).toFixed(2) %></p>
+                        </div>
+        
+                        
+        
+                        <form class="edit-form" method="post" action="/admin/<%= food._id %>?_method=PUT" enctype="multipart/form-data">
+                                <input type="hidden" name="_method" value="PUT">
+                                <label for="edit-name-<%= food._id %>">Name:</label>
+                                <input type="text" name="name" id="edit-name-<%= food._id %>" value="<%= food.name %>" required>
+                                <label for="edit-price-<%= food._id %>">Price:</label>
+                                <input type="number" name="price" id="edit-price-<%= food._id %>" value="<%= parseFloat(food.price).toFixed(2) %>" required>
+                            
+                                <label for="edit-image-<%= food._id %>">Image:</label>
+                                <input class="imaginpt" type="file" name="image" id="image-<%= food._id %>">
+                
+                                <button type="submit" class="edit-btn">&#9998;   Edit</button>
+                        </form>
+
+                        <div class="delete-btn">
+                            <form method="post" action="/admin/<%= food._id %>?_method=DELETE" style="display:inline;">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="delete-btn">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    <%-include("./partial/Footer");%>
+</body>
+
+</html>

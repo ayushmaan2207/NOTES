@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #1c1c1c; 
+    border-bottom: 0.1px solid #faf9f61e;
+}
+
+#logo {
+    flex: 1; /* Pushes the logo to the left */
+}
+
+#logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F8EDED;
+}
+
+#header {
+    flex: 2; /* Centers the header items */
+    display: flex;
+    justify-content: center;
+}
+
+#header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f5f5f5; /* Example text color */
+}
+
+#header a:hover {
+    color: #ffd900;
+}
+
+#icons {
+    flex: 1; /* Pushes the icons to the right */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+#signup {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #f5f5f5; /* Example text color */
+    font-weight: bold;
+}
+#signup:hover{
+    border-radius: 8px;
+    box-shadow:1px 1px 10px #ffd90055;
+}
+#logout{
+    margin-left: 15px;
+    text-decoration: none;
+    color: #f5f5f5; /* Example text color */
+    font-weight: bold;
+}
+#logout:hover{
+    border-radius: 8px;
+    box-shadow:1px 1px 10px #ffd90055;
+}
+.user-greeting {
+    color: white;
+    font-size: 16px; 
+    margin-right: 10px; 
+}
+
+.same {
+    background-color: #f3d6877b; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 0px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: 10px; /* Add some spacing between buttons */
+    
+}
+
+.same a {
+    color: white; /* Keep link text white */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.same:hover {
+    background-color: #1c1c1c; /* Darker blue on hover */
+}
+.same:active {
+    background-color: #f3d6877b; /* Darker blue on hover */
+}
+.user-greeting {
+    font-size: 18px; /* Slightly larger font for the greeting */
+    margin-right: 20px; /* Space between greeting and button */
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spacing between icons and buttons */
+}
+
+#cart-icon {
+    color: #fff; /* Cart icon color */
+    font-size: 20px; /* Adjust size */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Spacing around the icon */
+    cursor: pointer;
+}
+
+#cart-icon:hover {
+    color: #dc9c12; /* Change color on hover */
+}
+

@@ -1,0 +1,141 @@
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.black{
+  background-color: #131313;
+}
+
+.top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 0.1px solid #faf9f61e;
+}
+.text{
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 70px 150px;
+}
+.text .span00{
+  background: linear-gradient(to top, rgb(58, 98, 114), rgb(0, 142, 198));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.span0{
+  background: linear-gradient(to top, rgb(126, 218, 255), rgb(0, 142, 198));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.span1{
+  background: linear-gradient(to top, #f09819, #ff512f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.span2{
+  background: linear-gradient(to top, #f9d423, #e65c00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text1{
+  color: #000;
+  background-color: #fafafa;
+}
+.text h1{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+}
+.text p{
+  font-size: 20px;
+    color: #00000095;
+    text-align: center;
+    padding: 0 200px;
+}
+.imgcont{
+  justify-content: center;
+  display: flex;
+  gap: 2%;
+  padding: 0px 100px;
+  background: linear-gradient( #fafafa 65% ,#131313 60%);
+}
+.imgcont img{
+  height: 47vh;
+  width: 30%;
+}
+
+
+.more{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fs{
+  display: flex;
+  padding:100px 150px;
+  gap: 10%;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  color: #fafafa89;
+}
+.left .h1{
+  width: fit-content;
+  font-size: 35px;
+  font-weight: 600;
+  background-image: linear-gradient(175deg, #833ab4, #fd1d1d, #fcb045);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+}
+.left .h10{
+  width: fit-content;
+  font-size: 35px;
+  font-weight: 600;
+  background: linear-gradient(to top, #f09819, #ff512f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.left .h11{
+  width: fit-content;
+  font-size: 35px;
+  font-weight: 600;
+  background: linear-gradient(to top, rgb(126, 218, 255), rgb(0, 142, 198));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.left p{
+  font-size: 18px;
+}
+.right{
+  width: 40%;
+  box-shadow: 1px 1px 10px #fd1d1d;
+}

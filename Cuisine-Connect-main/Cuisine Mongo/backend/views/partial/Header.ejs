@@ -1,0 +1,33 @@
+<header >
+    <div id="logo" style= " display: flex; flex-direction: row; align-items:center; gap:10px">
+        <img class="logo" style="height:40px; width:40px " src="https://i.pinimg.com/1200x/9c/0e/de/9c0edef80de1893774c8a74883a916f9.jpg" alt="">
+        <h2 style="color:white">Cuisine Connect</h2>
+    </div>
+    
+    <div id="header" >
+        <% for(let i = 0; i < header.length; i++) { %>
+            <%if(header[i]=="Home" || header[i]== "Menu"){%>
+                <a style="font-size: 17px;" href="<%= header[i] %>"><%= header[i] %></a>
+            <% }else{ %>
+                <a style="font-size: 17px;" href="Home#<%= header[i] %>"><%= header[i] %></a>
+            <% } %>
+        <% } %>
+    </div>
+
+    <div id="icons">
+        <% if (user) { %>
+            <span class="user-greeting">Hello, <b><%= user.name %></b></span>
+            <a href="/cart" id="cart-icon">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <a href="/orders" id="order-link" style="color: white; text-decoration: none; margin: 0 10px;">
+                Orders
+            </a>
+            <a href="/logout" id="logout"><button class="same" style="display:flex; align-items:center; padding:10px; 
+            background-color: #ffffff12; border: 2px solid rgba(128, 128, 128, 0.5);border-radius: 8px; margin:0;">Logout</button></a>
+        <% } else { %>
+            <a href="/signup " id="signup"><button class="same" style="display:flex; align-items:center; padding:10px; 
+            background-color: #ffffff12; border: 2px solid rgba(128, 128, 128, 0.5);border-radius: 8px; margin:0;">Sign Up</button></a>
+        <% } %>
+    </div>
+</header>

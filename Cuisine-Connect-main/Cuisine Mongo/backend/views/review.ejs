@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/review.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Submit Your Review</title>
+</head>
+<body>
+    <%- include("./partial/Header"); %>
+
+    <div class="wrapper">
+        <h3>Review for Order: <%= order._id %></h3>
+        <p><strong>Order Date:</strong> <%= new Date(order.orderDate).toLocaleString() %></p>
+        <p><strong>Items:</strong></p>
+        <ul>
+            <% order.items.forEach(item => { %>
+                <li><%= item.quantity %> x <%= item.foodName %> ($<%= item.price.toFixed(2) %>)</li>
+            <% }); %>
+        </ul>
+        <form action="/orders/<%= order._id %>/review" method="POST">
+            <div class="rating">
+                <input type="number" name="rating" hidden>
+                <i class='bx bx-star star' style="--i: 0;"></i>
+                <i class='bx bx-star star' style="--i: 1;"></i>
+                <i class='bx bx-star star' style="--i: 2;"></i>
+                <i class='bx bx-star star' style="--i: 3;"></i>
+                <i class='bx bx-star star' style="--i: 4;"></i>
+            </div>
+            <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..." required></textarea>
+            <div class="btn-group">
+                <form action="/orders/<%= order._id %>/review" method="POST" style="display:inline;">
+                    <button type="submit" class="btn submit">Submit</button>
+                </form>
+                <a href="/orders" class="btn cancel">Cancel</a>
+            </div>            
+        </form>
+    </div>
+
+    <script>
+        const allStar = document.querySelectorAll('.rating .star')
+        const ratingValue = document.querySelector('.rating input')
+
+        allStar.forEach((item, idx) => {
+            item.addEventListener('click', function () {
+                let click = 0
+                ratingValue.value = idx + 1
+
+                allStar.forEach(i => {
+                    i.classList.replace('bxs-star', 'bx-star')
+                    i.classList.remove('active')
+                })
+                for (let i = 0; i < allStar.length; i++) {
+                    if (i <= idx) {
+                        allStar[i].classList.replace('bx-star', 'bxs-star')
+                        allStar[i].classList.add('active')
+                    } else {
+                        allStar[i].style.setProperty('--i', click)
+                        click++
+                    }
+                }
+            })
+        })
+    </script>
+    <%- include("./partial/Footer"); %>
+
+</body>
+</html>

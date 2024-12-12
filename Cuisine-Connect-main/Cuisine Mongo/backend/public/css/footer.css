@@ -1,0 +1,124 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.box6{
+    background-color: #1c1c1c;
+    font-family: Poppins;
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+.flex_box6{
+    display: flex;
+    flex-direction: row;
+    /* width: 691px; */
+}
+
+.logo{
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the image a circle */
+    object-fit: cover; /* Ensures the image covers the entire circle */
+    border: 2px solid #000; /* Optional: adds a border around the logo */
+}
+
+.b6l-1{
+    width: 791px;
+    flex: 3;
+}
+
+.b6l-2{
+    flex: 1;
+    padding-left: 15px;
+}
+
+.b6r-1{
+    flex: 1;
+    padding-left: 15px;
+}
+.b6r-2{
+    flex: 1;
+    padding-left: 15px;
+}
+
+.box5{
+    font-family: Poppins;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.box5_heading{
+    text-align: center;
+    font-size: 32px;
+}
+
+.box5_flex{
+    display: flex;
+    gap: 18px;
+    vertical-align: top;
+
+}
+
+.b5l {
+    /* height: 222px; */
+    flex: 1;
+    box-shadow: 2px 2px 4px #ccc; 
+    border: 2px solid #ccc;
+    padding-left: 20px;
+}   
+
+
+.b5r{
+    flex: 1;
+    box-shadow: 2px 2px 4px #ccc; 
+    border: 2px solid #ccc;
+    padding-left: 20px; 
+}
+
+.b6_button{
+    background-color: #1C1C1C;
+    height: 56px;
+    width: 160px;
+    border: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.box5_anchor:hover{
+    color: #84d8e6;
+    transition-delay: 0.25s;
+}
+
+.playstore{
+    width: 220px;
+    height: 50px;
+    font-family: Poppins;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    vertical-align: middle;
+    line-height: 22px;
+    letter-spacing: .625px;
+    text-transform: capitalize;
+    color: #1C1C1C;
+}
+
+
+.apple{
+    width: 220px;
+    height: 50px;
+    vertical-align: top; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}

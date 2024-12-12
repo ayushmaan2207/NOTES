@@ -1,0 +1,57 @@
+.wrapper {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.rating {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.rating .star {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rating .star.active {
+    color: #ffc107;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn.submit {
+    background-color: #28a745;
+}
+
+.btn.cancel {
+    background-color: #dc3545;
+}
+
+.btn.cancel:hover {
+    background-color: #c82333;
+}

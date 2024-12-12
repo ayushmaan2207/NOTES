@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Orders</title>
+    <link rel="stylesheet" type="text/css" href="/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/css/order.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <%- include("./partial/Header"); %>
+
+    <div class="allo">
+      <h1>Your Orders</h1>
+      <% if (orders.length === 0) { %>
+      <p class="noo">No orders found.</p>
+      <% } else { %>
+      <ul class="ordercont">
+        <% orders.forEach(order => { %>
+        <li class="order order-item">
+          <div class="infocard">
+            <div class="la">
+              <strong>Order Date:</strong>
+              <%= new Date(order.orderDate).toLocaleString() %>
+            </div>
+            <div class="la">
+              <strong>Total Price:</strong>
+              <span>₹<%= order.totalPrice.toFixed(2) %></span>
+            </div>
+            <div class="la">
+              <strong>Order Status:</strong>
+              <span
+                class="status <%= order.status.toLowerCase().replace(' ', '-') %>"
+              >
+                <%= order.status %>
+              </span>
+            </div>
+          </div>
+          <div class="itemscard">
+            <strong>Items:</strong>
+            <ul>
+              <% order.items.forEach(item => { %>
+              <li>
+                <%= item.quantity %> x <%= item.foodName %> (₹<%=
+                item.price.toFixed(2) %>)
+              </li>
+              <% }); %>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <% if (order.status.toLowerCase() === 'completed') { %> <% if
+          (order.review) { %>
+          <div class="review-section">
+            <strong>Your Review:</strong>
+            <p><strong>Rating:</strong> <%= order.review.rating %> Stars</p>
+            <p><strong>Opinion:</strong> <%= order.review.opinion %></p>
+            <% if (order.review.adminRemark) { %>
+            <div class="admin-reply">
+              <strong>Admin Remark:</strong>
+              <p><%= order.review.adminRemark %></p>
+            </div>
+            <% }%>
+          </div>
+          <% } else { %>
+          <a href="/orders/<%= order._id %>/review" class="btn review-btn"
+            >Leave a Review</a
+          >
+          <% } %> <% } %>
+        </li>
+        <hr />
+        <% }); %>
+      </ul>
+      <% } %>
+    </div>
+
+    <%- include("./partial/Footer"); %>
+  </body>
+</html>

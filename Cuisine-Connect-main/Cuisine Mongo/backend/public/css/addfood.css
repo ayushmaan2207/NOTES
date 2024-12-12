@@ -1,0 +1,286 @@
+/* General body and layout styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+body {
+    margin: 0;
+    background: #eeecec;
+    font-family: Arial, sans-serif;
+    color: #333;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #1c1c1c; 
+    border-bottom: 0.1px solid #faf9f61e;
+}
+.apo{
+    display: flex;
+    gap: 10px;
+}
+.apo button{
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+#AdminOrder{
+    display:flex; 
+    align-items:center; 
+    padding:10px 20px; 
+    background-color: #ffd900; 
+    border-radius: 5px; 
+    margin:0;
+    
+}
+#AdminOrder button{
+    color: #1c1c1c;
+    font-weight: 600;
+
+}
+#AdminOrder:hover{
+    background-color: #ffd900e5; 
+    scale: 0.95;
+
+
+}
+#logout{
+    display:flex; 
+    align-items:center; 
+    padding:10px; 
+    background-color: #ffffff12; 
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    border-radius: 8px; 
+    margin:0
+}
+#logout:hover{
+    box-shadow:1px 1px 5px #ffd90055;
+}
+
+
+.admininfo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #1c1c1c;
+    color: #faf9f693;
+    padding: 70px 40% 50px 80px;
+    font-size: 20px;
+}
+.admininfo h1{
+    color: #FAF9F6;
+    font-size: 50px;
+}
+
+.admininfo h1 b{
+    background: linear-gradient(to top, rgb(104, 212, 255), rgb(0, 142, 198));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#logo {/* Pushes the logo to the left */
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        
+    }
+    
+    #logo img {
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #000;
+    }
+    
+    
+    #logo p {
+        margin: 0;
+        font-size: 16px;
+    }
+    
+    
+    
+    .same{
+        font-size: 16px;
+        color: #FAF9F6;
+    }
+
+
+
+ .afi{
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    box-shadow:1px 1px 5px #1c1c1c54 ;
+    background-color: #FAF9F6;
+    z-index: 999;
+    border-radius: 5px;
+    padding: 50px 20px;
+ }
+/* Form section styling */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section form input{
+    padding: 10px;
+    border: 1px solid #00000061;
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.356);
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+.form-section form input::placeholder{
+    font-size: 15px;
+}
+
+.form-section form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #ffd900;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+}
+
+.form-section form button:hover {
+    background-color: #ffd900e5;
+    scale: 0.95;
+}
+
+.efi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 58%; 
+    margin: 30px;
+    margin-left: 70px;
+    padding: 35px;
+    gap: 20px;
+    border: 1px solid #1c1c1c;
+}
+
+
+.foodcont{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.food-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow:1px 1px 5px #1c1c1c54 ;
+    background-color: #FAF9F6;
+    padding: 25px 8px;
+    margin: 10px 0;
+    width:30%;
+    text-align: center;
+    position: relative;
+    gap: 5px;
+}
+.food-item:hover{
+    box-shadow:1px 1px 10px #1c1c1c70;
+}
+
+.food-item img {
+    width: 80%;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 10px 15px;
+    padding-bottom: 0;
+}
+
+.edit-form label{
+    font-weight: 600;
+}
+
+.edit-form input{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+}
+
+.edit-btn{
+    margin-top: 15px;
+    width: 99%;
+    border: none;
+    font-size: 17px;
+    background-color: #ffd900;
+    padding: 10px 20px;
+    border-radius: 5px;
+    align-self: center;
+}
+.edit-btn:hover {
+    background-color: #f5d000;
+
+}
+
+
+.delete-btn{
+    width: 88%;
+    
+}
+.delete-btn button:hover {
+    background-color: #ef476f;
+    color: #1c1c1c;
+}
+.delete-btn .delete-btn{
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    color: #ef476f;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    
+    padding: 12px;
+    align-self: center;
+}
