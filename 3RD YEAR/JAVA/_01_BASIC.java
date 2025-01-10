@@ -70,8 +70,9 @@ public class _01_BASIC {
             // Arrays.sort(finalMarks,(a,b)->a[0]-b[0]);
             // Arrays.sort(finalMarks,(a,b)->b[0]-a[0]);
             
-            Arrays.sort(finalMarks,(a,b)->a[1]-b[1]);
+            // Arrays.sort(finalMarks,(a,b)->a[1]-b[1]);
             // Arrays.sort(finalMarks,(a,b)->b[1]-a[1]);
+            
 
             for(int i=0;i<finalMarks.length;i++){
                 for(int j=0;j<finalMarks[i].length;j++){
@@ -96,9 +97,15 @@ public class _01_BASIC {
             String pass = "art356";
             boolean isDig= Character.isDigit(pass.charAt(4));
             // System.out.println(isDig);
-            int x=34;
-            String y= "adf" + String.valueOf(x);
-            // System.out.println(y);
+            int x=13;
+            // String y= "adf" + String.valueOf(x);
+            // String y= "adf" + Integer.toString(x);
+
+        // convert to binary;
+            // String y= Integer.toString(x,2);
+        // count no. of 1s in binary no.
+            int y = Integer.bitCount(x);
+            System.out.println(y);
 //
         // Constrants
 

@@ -9,6 +9,7 @@ node -> ith index
 left child -> 2*i index
 right child -> (2*i)+1 index
 parent -> i/2 index
+leaf nodes -> ((n/2)+1) to (n) index
 */
 class heap
 {

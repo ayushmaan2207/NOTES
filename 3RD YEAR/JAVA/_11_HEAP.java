@@ -1,6 +1,12 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
-
+/*
+node -> ith index
+left child -> 2*i index
+right child -> (2*i)+1 index
+parent -> i/2 index
+leaf nodes -> ((n/2)+1) to (n) index
+*/
 
 public class _11_HEAP {
     public static void main(String[] args) {

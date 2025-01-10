@@ -62,6 +62,6 @@ public class _05_HASHMAP_HASHSET{
     
     // delete
         map.remove("M");
-        // System.out.println(map);
+        System.out.println(map);
     }
 }
