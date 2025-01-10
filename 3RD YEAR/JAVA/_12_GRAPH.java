@@ -87,7 +87,9 @@ public class _12_GRAPH {
         return false;
     }
 
-    public static void dijkstra(ArrayList<Edge>graph [],int src,int des)
+    public static void dijkstra(ArrayList<Edge>graph [],int src,int des){
+        
+    }
     public static void main(String[] args) {
         int v=9;
         /*
