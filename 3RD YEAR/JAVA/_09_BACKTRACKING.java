@@ -1,4 +1,9 @@
 public class _09_BACKTRACKING {
+    //  HEAD RECURRSION 
+        /* when we calculate the ans while falling */
+
+    // TAIL RECURRSION
+        /*calculate ans while climbing */
     public static void help(String s,int [] f,String a) {
         if(a.length()== s.length()){
             System.out.println(a);

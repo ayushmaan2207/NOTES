@@ -32,6 +32,7 @@ int main(){
     string li[2];
     li[0]="hello";
     cout<<li[0]<<endl;
+    cout<<*li<<endl;
     
     return 0;
 } 
