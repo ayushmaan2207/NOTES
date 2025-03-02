@@ -5,7 +5,10 @@ class employee
 public: // three types: public, private & proctected
     string name;
     int salary;
+    
+    employee(){
 
+    }
     employee(string n, int s,int sp)
     {
         this->name = n;
@@ -31,13 +34,14 @@ class programmer : public employee{
 
 int main()
 {
-    // employee e1;
-    // e1.name = "ayush";
-    // e1.salary = 100;
-    // cout << "employee name is " << e1.name << " and his salary is " << e1.salary << endl;
+    employee e1;
+    e1.name = "ayush";
+    e1.salary = 100;
+    cout << "employee 1 name is " << e1.name << " and his salary is " << e1.salary << endl;
+
     employee e2("constructor", 1500,123456);
-    // cout<< e2.secretpass; //cannot access coz it is private
     e2.printd();
+    // cout<< e2.secretpass; //cannot access coz it is private
     e2.getsp();
     return 0;
 }
