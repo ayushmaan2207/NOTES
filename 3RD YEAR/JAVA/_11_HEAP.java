@@ -1,4 +1,3 @@
-import java.util.Comparator;
 import java.util.PriorityQueue;
 /*
 node -> ith index
@@ -11,7 +10,7 @@ leaf nodes -> ((n/2)+1) to (n) index
 public class _11_HEAP {
     public static void main(String[] args) {
     // MAX HEAP
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)-> b-a);
 
         System.out.println("MAX HEAP");
         maxHeap.add(4);

@@ -65,37 +65,37 @@ int main(){
 
     // QUEUE USING ARRAY
 
-    Queue q;
-    q.push(22);
-    q.push(5);
-    q.push(69);
-    cout<<q.frontt()<<endl;
-    q.pop();
-    cout<<q.frontt()<<endl;
-    if(q.isEmpty()){
-         cout<<"queue is empty"<<endl;
-    }
-    else{
-        cout<<"queue is not empty"<<endl;
-    }
+    // Queue q;
+    // q.push(22);
+    // q.push(5);
+    // q.push(69);
+    // cout<<q.frontt()<<endl;
+    // q.pop();
+    // cout<<q.frontt()<<endl;
+    // if(q.isEmpty()){
+    //      cout<<"queue is empty"<<endl;
+    // }
+    // else{
+    //     cout<<"queue is not empty"<<endl;
+    // }
 
 
 
     // QUEUE USING STL
 
-    // queue<int> q;
-    // q.push(22);
-    // q.push(69);
-    // q.push(5);
-    // cout<<"size: "<<q.size()<<endl;
-    // q.pop();
-    // cout<<"front element: "<<q.front()<<endl;
-    // if(q.empty()){
-    //     cout<<"queue is empty"<<endl;
-    // }
-    // else{
-    //     cout<<"queue is not empty"<<endl;
-    // }
+    queue<int> q;
+    q.push(22);
+    q.push(69);
+    q.push(5);
+    cout<<"size: "<<q.size()<<endl;
+    q.pop();
+    cout<<"front element: "<<q.front()<<endl;
+    if(q.empty()){
+        cout<<"queue is empty"<<endl;
+    }
+    else{
+        cout<<"queue is not empty"<<endl;
+    }
 
     // DOUBLY ENDED QUEUE
 
